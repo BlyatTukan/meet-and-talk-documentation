@@ -1,0 +1,109 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  /*color: #888;*/
+  color: #ccc;
+  background: #17181c;
+  box-shadow: inset 0px 0px 30px #101013;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #307736;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #777;
+  text-shadow: 0px 0px 3px #777;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #e2b900;
+  text-shadow: 0px 0px 3px #e2b900;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #3eca2b;
+  text-shadow: 0px 0px 3px #3eca2b;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: rgb(179, 70, 70);
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #21aee4;
+  text-shadow: 0px 0px 3px #21aee4;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+  text-shadow: 0px 0px 3px #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #7d9900;
+  text-shadow: 0px 0px 3px #7d9900;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+  text-shadow: 0px 0px 3px #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
