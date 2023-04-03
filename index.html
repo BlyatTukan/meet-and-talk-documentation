@@ -117,7 +117,35 @@
 							</ul>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="#tab_hb_integration">Hellish Battle Integration</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="#tab_node">Node</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_howtouse">How to Use</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse"> Create New Dialogue</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse"> Add New Character</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse"> Add New Event</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse"> Use Dialogue in Scene</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_howtofix">How to Fix</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#howtofix_probuilder"> Warning; Behavior is Missing!</a>
+								</li>
+							</ul>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#tab_template">More Templates</a>
@@ -125,6 +153,9 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#tab_changelog">Changelog</a>
 							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_0_0b"> 1.0.0b</a>
+								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#changelog_1_0_0a"> 1.0.0a</a>
 								</li>
@@ -212,6 +243,34 @@
 
 						<hr class="divider" />
 
+						<!-- Getting Started
+		============================ -->
+						<section id="tab_hb_integration">
+							<h2>Hellish Battle Integration</h2>
+							<p class="alert alert-info mb-5">
+								Hellish Battle supports the basic version and the free version
+							</p>
+							<p>
+								The only thing you need to do to integrate Meet and Talk and Hellish Battle, you need to install Meet and Talk in the Project where Hellish Battle is located
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/localization/base.png"
+									><img class="img-fluid border" src="assets/images/integration/mat_1.png" alt=""
+								/></a>
+							</p>
+							<h4>Setup Dialog</h4>
+							<p>
+								To add a dialogue to the scene, you must set WhenInteraction() in the Interaction Script to assign a new event and find the InteractionScript.StartDialogue() function and assign the appropriate Dialogue file to it
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/localization/base.png"
+									><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt=""
+								/></a>
+							</p>
+						</section>
+
+						<hr class="divider" />
+
 						<!-- Node
 		============================ -->
 						<section id="tab_node">
@@ -277,6 +336,37 @@
 
 						<hr class="divider" />
 
+						
+						<section id="tab_howtouse">
+							<h2>How to Use?</h2>
+
+							<h4>Setup Dialog</h4>
+							
+							<p>
+								<a class="popup-img" href="assets/images/localization/base.png"
+									><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt=""
+								/></a>
+							</p>
+						</section>
+
+						<hr class="divider" />
+
+						
+						<section id="tab_howtofix">
+							<h2>How to Fix?</h2>
+							<h4><span class="badge badge-yellow">Warning:</span> Behavior is Missing!</h4>
+							<p>
+								If after installing Meet and Talk you get a message in the console saying <code>Behavior is missing!</code> you probably need to install the ProBuilder package which you can install at <code>Window</code> -> <code>Package Manager</code> -> <code>Packages: Unity Register</code> and here you need to search for <code>Pro Builder</code>
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/ProBuilder.png"
+									><img class="img-fluid border" src="assets/images/ProBuilder.png" alt=""
+								/></a>
+							</p>
+						</section>
+
+						<hr class="divider" />
+
 						<!-- More Templates
 		============================ -->
 						<section id="tab_template">
@@ -324,6 +414,28 @@
 								Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
 								<a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
 							</p>
+
+							<h3 id="changelog_1_0_0b">
+								Version 1.0.0b
+								<small class="text-muted">07 April, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-orange">Integration</span>
+									<span class="badge badge-blue">Free Version</span>
+									Hellish Battle Integration
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue">Free Version</span>
+									Skil Button
+								</li>
+								<li>
+									<span class="badge badge-red">Fix</span>
+									<span class="badge badge-blue">Free Version</span>
+									Fix Few Bugs
+								</li>
+							</ul>
 
 							<h3 id="changelog_1_0_0a">
 								Version 1.0.0a
