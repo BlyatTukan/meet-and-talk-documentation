@@ -1,374 +1,620 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
-		<link href="assets/images/favicon.png" rel="icon" />
-		<title>Meet and Talk | Online Documentation</title>
-		<meta name="description" content="Online Documentation to Hellish Battle" />
-		<meta
-			name="keywords"
-			content="Hellish Battle, Hellish, Battle, Tiny Slime, Tiny Slime Studio, Assets, FPS, Retro FPS, Retro, Asset Store, Doom, 2.5D, 2.5D FPS, Documentation, Hellish Documentation, Hellish Battle Documentation"
-		/>
-		<meta name="author" content="TIny Slime Studio" />
+<html lang="en" class="print">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+      <link href="assets/images/favicon.png" rel="icon" />
+      <title>Meet and Talk | Online Documentation</title>
+      <meta name="description" content="Online Documentation to Hellish Battle" />
+      <meta
+         name="keywords"
+         content="Hellish Battle, Hellish, Battle, Tiny Slime, Tiny Slime Studio, Assets, FPS, Retro FPS, Retro, Asset Store, Doom, 2.5D, 2.5D FPS, Documentation, Hellish Documentation, Hellish Battle Documentation"
+         />
+      <meta name="author" content="TIny Slime Studio" />
+      <!-- Stylesheet
+         ============================== -->
+      <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+      <!-- Font Awesome Icon -->
+      <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+      <!-- Magnific Popup -->
+      <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+      <!-- Highlight Syntax -->
+      <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+   </head>
+   <body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+      <!-- Preloader -->
+      <div class="preloader">
+         <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+      </div>
+      <!-- Preloader End -->
+      <!-- Document Wrapper   
+         =============================== -->
+      <div id="main-wrapper">
+         <!-- Header
+            ============================ -->
+         <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+               <div class="container-fluid">
+                  <!-- Sidebar Toggler -->
+                  <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+                  <span></span><span class="w-75"></span><span class="w-50"></span>
+                  </button>
+                  <!-- Logo -->
+                  <a class="logo ml-md-3" href="index.html" title="iDocs Template"></a>
+                  <span class="text-6 ml-2">MEET AND TALK- DIALOGUE SYSTEM</span>
+                  <!-- Logo End -->
+                  <!-- Navbar Toggler -->
+                  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+                  <span></span><span></span><span></span>
+                  </button>
+                  <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                     <ul class="navbar-nav">
+                        <li>
+                           <a target="_blank" href="https://assetstore.unity.com/publishers/63085">Assets Store</a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio Website</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+                     <li class="social-icons-github">
+                        <a data-toggle="tooltip" href="https://github.com/BlyatTukan" target="_blank" title="" data-original-title="Github"
+                           ><i class="fab fa-github"></i
+                           ></a>
+                     </li>
+                     <li class="social-icons-discord">
+                        <a data-toggle="tooltip" href="https://discord.gg/KtHKbYjBMS" target="_blank" title="" data-original-title="Discord"
+                           ><i class="fab fa-discord"></i
+                           ></a>
+                     </li>
+                     <li class="social-icons-youtube">
+                        <a
+                           data-toggle="tooltip"
+                           href="https://www.youtube.com/channel/UCnhLf9kMlT55ftMMKSu5Qwg"
+                           target="_blank"
+                           title=""
+                           data-original-title="Youtube"
+                           ><i class="fab fa-youtube"></i
+                           ></a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- Navbar End -->
+         </header>
+         <!-- Header End -->
+         <!-- Content
+            ============================ -->
+         <div id="content" role="main">
+            <!-- Sidebar Navigation
+               ============================ -->
+            <div class="idocs-navigation">
+               <ul class="nav flex-column">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#tab_installation">Installation</a>
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#installation_started">Getting Started</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#tab_node">Node</a>
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_start">Start Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_dialogue">Dialogue Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_choice">Choice Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_end">End Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_timer"><span class="badge badge-purple">PRO</span> Timer Choice Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_event"><span class="badge badge-purple">PRO</span> Event Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_random"><span class="badge badge-purple">PRO</span> Random Node</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#node_command"><span class="badge badge-purple">PRO</span> Command Node</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#tab_howtouse">How to Use</a>
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_NewDialogue">New Dialogue</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_NewCharacter">New Character</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_SetupUI">Setup UI</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_GetDialog">Use Dialogue in Game</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_NewEvent"><span class="badge badge-purple">PRO</span> New Event</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#tab_integration">Integration</a>
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#integration_hellish_battle">Hellish Battle</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#integration_UHFPS">Ultimate Horror FPS</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#tab_template">More Templates</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#tab_changelog">Changelog</a>
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#changelog_1_2_0a"> 1.2.0a</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#changelog_1_1_0a"> 1.1.0a</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#changelog_1_0_0b"> 1.0.0b</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#changelog_1_0_0a"> 1.0.0a</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <!-- Docs Content
+               ============================ -->
+            <div class="idocs-content">
+               <div class="container">
+                  <!-- installation
+                     ============================ -->
+                  <section id="tab_installation">
+                     <h1>Documentation</h1>
+                     <h2>Meet and Talk - Dialogue System</h2>
+					                      <a class="popup-img" href="assets/images/Cover.png"
+                        ><img class="img-fluid border" src="assets/images/Cover.png" alt=""
+                        /></a>
+                     <!--<a class="btn btn-primary" href="https://blyattukan.github.io/hellish-battle-documentation/"><i class="fas fa-external-link-alt mr-1"></i> Online Documentation</a>-->
+                     <hr />
+                     <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                           <ul class="list-unstyled">
+                              <li><strong>Version:</strong> 1.2.0a</li>
+                              <li>
+                                 <strong>Author:</strong>
+                                 <a href="https://assetstore.unity.com/publishers/63085" target="_blank">Tiny Slime Studio</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                           <ul class="list-unstyled">
+                              <li>
+                                 <strong class="font-weight-700">Created:</strong>
+                                 01 March, 2023
+                              </li>
+                              <li><strong>Update:</strong> 25 August, 2023</li>
+                           </ul>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                           <ul class="list-unstyled">
+                              <li><strong>File Size:</strong> 1.7 MB</li>
+                              <li>
+                                 <strong>Unity Versions:</strong>
+                                 2021.3.17+
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </section>
+                  <hr class="divider" />
+                  <!-- Getting Started
+                     ============================ -->
+                  <section id="installation_started">
+                     <h2>Getting Started</h2>
+                     <p>Create a new 3D project.</p>
+                     <p>
+                        <a class="popup-img" href="assets/images/instalattion/getting_started_1.png"
+                           ><img class="img-fluid border" src="assets/images/instalattion/getting_started_1.png" alt=""
+                           /></a>
+                     </p>
+                     <p>
+                        From the toolbar, select
+                        <code>Window -> Package Manager</code> to open the Package Manager
+                     </p>
+                     <p>
+                        <a class="popup-img" href="assets/images/instalattion/getting_started_2.png"
+                           ><img class="img-fluid border" src="assets/images/instalattion/getting_started_2.png" alt=""
+                           /></a>
+                     </p>
+                     <p>
+                        From Droplist Packages: select
+                        <code>My Assets</code> and search <code>Meet and Talk</code>, download and install
+                     </p>
+                     <p>
+                        <a class="popup-img" href="assets/images/instalattion/getting_started_3.png"
+                           ><img class="img-fluid border" src="assets/images/instalattion/getting_started_3.png" alt=""
+                           /></a>
+                     </p>
+                     <p>Once installed, the assets are ready to be installed</p>
+                  </section>
+                  <hr class="divider" />
+                  <!-- Node
+                     ============================ -->
+                  <section id="tab_node">
+                     <h2>Node</h2>
+                     <div class="row">
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img class="img-fluid border" src="assets/images/node/Start.png" alt="" />
+                              <h6 class="pt-2">Start Node</h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="assets/images/node/Dialogue.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Dialogue Node</h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="assets/images/node/End.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">End Node</h6>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img class="img-fluid border" src="assets/images/node/Choice.png" alt="" />
+                              <h6 class="pt-2">Choice Node</h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="assets/images/node/Timer.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Timer Choice Node<br /><span class="badge badge-purple">Pro</span></h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="assets/images/node/Event.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Event Node<br /><span class="badge badge-purple">Pro</span></h6>
+                           </a>
+                        </div>
+                     </div>
+					<div class="row">
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img class="img-fluid border" src="assets/images/node/Random.png" alt="" />
+                              <h6 class="pt-2">Random Node<br /><span class="badge badge-purple">Pro</span></h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="assets/images/node/Command.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Command Node<br /><span class="badge badge-purple">Pro</span></h6>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  </section>
+                  <hr class="divider" />
+                  <section id="node_start">
+    <h2>Start Node</h2>
+    <p>The Start Node is used to initiate a dialogue. If you want the dialogue to begin from one of several predefined points, add multiple Start Nodes. You can also assign a Start Node ID, which allows you to invoke a specific beginning of the dialogue without the need to create multiple copies of the same dialogue.</p>
+</section>
+<hr class="divider" />
+<section id="node_dialogue">
+    <h2>Dialogue Node</h2>
+    <p>The Dialogue Node is a fundamental node for displaying text. It allows assigning the speaker for the current line, associating an audio clip, and setting display time.</p>
+    <ul class="changelog long-badge">
+        <li>
+            <span class="badge">Audio Clip</span>
+            Audio played when the node begins.
+        </li>
+        <li>
+            <span class="badge">Character SO</span>
+            Name of the character delivering the dialogue.
+        </li>
+        <li>
+            <span class="badge">Displayed Text</span>
+            Text displayed when the node begins.
+        </li>
+        <li>
+            <span class="badge">Display Time</span>
+            Time after which it automatically transitions to the next node.
+            <br><code class="new-line">[if 0, manual transition is required]</code>
+        </li>
+    </ul>
+</section>
+<hr class="divider" />
+<section id="node_choice">
+    <h2>Choice Node</h2>
+    <p>The Choice Node functions similarly to the Dialogue Node, but the player must select one of the available responses.</p>
+    <ul class="changelog long-badge">
+        <li>
+            <span class="badge">Audio Clip</span>
+            Audio played when the node begins.
+        </li>
+        <li>
+            <span class="badge">Character SO</span>
+            Name of the character delivering the dialogue.
+        </li>
+        <li>
+            <span class="badge">Displayed Text</span>
+            Text displayed when the node begins.
+        </li>
+        <li>
+            <span class="badge">Time to Display Option</span>
+            Time after which the options will be displayed.
+        </li>
+    </ul>
+    <p>To add options, click <b>+ Add Choice Option</b> in the top right corner of the Node.</p>
+</section>
 
-		<!-- Stylesheet
-============================== -->
-		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-		<!-- Magnific Popup -->
-		<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
-		<!-- Highlight Syntax -->
-		<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
-		<!-- Custom Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
-	</head>
+                  <hr class="divider" />
+<section id="node_end">
+   <h2>End Node</h2>
+   <p>The End Node is used to conclude a dialogue, but it has several additional options</p>
+   <ul class="changelog long-badge">
+      <li>
+         <span class="badge">End</span>
+         Ends the Dialogue
+      </li>
+      <li>
+         <span class="badge">Repeat</span>
+         Repeats the last displayed Node
+      </li>
+      <li>
+         <span class="badge">GoBack</span>
+         Repeats the second-to-last displayed Node
+      </li>
+      <li>
+         <span class="badge">ReturnToStart</span>
+         Returns to a random Start Node
+      </li>
+   </ul>
+</section>
+<hr class="divider" />
+<section id="node_timer">
+   <h2><span class="badge badge-purple">Pro</span> Timer Choice Node</h2>
+   <p>The Timer Choice Node works similarly to the Choice Node, but if the player does not select a response within a specified time, the system will automatically proceed to the assigned node</p>
+   <ul class="changelog long-badge">
+      <li>
+         <span class="badge">Audio Clip</span>
+         Audio played at the start of the node
+      </li>
+      <li>
+         <span class="badge">Character SO</span>
+         Name of the character delivering the dialogue
+      </li>
+      <li>
+         <span class="badge">Displayed Text</span>
+         Text displayed at the start of the node
+      </li>
+      <li>
+         <span class="badge">Time to Display Option</span>
+         Time after which the options will be displayed
+      </li>
+      <li>
+         <span class="badge">Time to Make Decision</span>
+         Time player has to make a decision
+      </li>
+   </ul>
+   <p>To add choices, you need to click <b>+ Add Choice Option</b> in the top right corner of the Node</p>
+   <code>The first added port corresponds to the transition if the player does not select any option</code>
+</section>
+<hr class="divider" />
 
-	<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
-		<!-- Preloader -->
-		<div class="preloader">
-			<div class="lds-ellipsis">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
-		<!-- Preloader End -->
+                  <section id="node_event">
+    <h2><span class="badge badge-purple">Pro</span> Event Node</h2>
+    <p>The Event Node does not display any information for the player but is used to execute assigned events.</p>
+    <p>To add a new Event, you need to click the <b>+ Add Event</b> option in the top corner of the Node and assign a previously created event to it or automatically create an event from the Node's position.</p>
+</section>
+<hr class="divider" />
+<section id="node_random">
+    <h2><span class="badge badge-purple">Pro</span> Random Node</h2>
+    <p>The Random Node has a simple task; when executed, it randomly selects a different Node.</p>
+    <p>To add a Random dialog, you need to click the <b>+ Add Option</b> option in the upper right corner of the node and assign the next Node to it.</p>
+</section>
+<hr class="divider" />
+<section id="node_command">
+    <h2><span class="badge badge-purple">Pro</span> Command Node</h2>
+    <p>The Command Node is used for creating comments in the editor. It can help in organizing large dialogs and make it easier to identify which part of the dialog it is.</p>
+</section>
+<hr class="divider" />
 
-		<!-- Document Wrapper   
-=============================== -->
-		<div id="main-wrapper">
-			<!-- Header
-  ============================ -->
-			<header id="header" class="sticky-top">
-				<!-- Navbar -->
-				<nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
-					<div class="container-fluid">
-						<!-- Sidebar Toggler -->
-						<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
-							<span></span><span class="w-75"></span><span class="w-50"></span>
-						</button>
+                  <!-- Getting Started
+                     ============================ -->
+                  <section id="tab_howtouse">
+                  </section>
+                  <section id="node_command">
+                     <h2>New Dialogue</h2>
+                     <p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the <code>Dialog</code> option and
+                        click <code>New Dialogue</code>
+                     </p>
+                     <p>Double-click on the created dialogue to edit it</p>
+                     <p>You will open the dialog editing window, at the beginning you must add start Node, and at the end of the dialog you must
+                        give end node <code>You can have more than one end of the dialog and at each end you must give end node</code>
+                     </p>
+                     <p>
+                        <a class="popup-img" href="assets/images/CreateDialogue.png"><img class="img-fluid border"
+                           src="assets/images/CreateDialogue.png" alt="" /></a>
+                     </p>
+                     <p>At the End you have to write the changes in the Dialog in the upper left corner of the editor</p>
+                  </section>
+                  <hr class="divider" />
+                  <section id="howtouse_NewCharacter">
+                     <h2>Create New Character</h2>
+                     <p>In the Hierarchy Tab, right-click, and in the pop-up window click <br><code>Create -> Dialogue -> New Dialogue Character</code></p>
+                     <p>In the Inspector tab, you will see all the options available for the character</p>
+                     <ul class="changelog long-badge">
+                        <li>
+                           <span class="badge">Character Name</span>
+                           Here you set the name in each available language
+                        </li>
+                        <li>
+                           <span class="badge">Text Color</span>
+                           Here you set the color that the character's name should have
+                        </li>
+                     </ul>
+                  </section>
+                  <hr class="divider" />
+                  <section id="howtouse_SetupUI">
+                     <h2>Setup Dialogue UI</h2>
+                     <p>To set up the Dialogue UI, you need to drag the <code>Meet and Talk</code> Prefab from the <code>Assets -> Meet and Talk -> Example</code> folder into the scene where you want to use the Dialogue System</p>
+                     <p class="alert alert-info">
+                        The Prefab can also be dragged, for example, into a player prefab, allowing for faster usage across multiple scripts
+                     </p>
+                     <p>The Meet and Talk.prefab contains two main objects responsible for the system's functionality</p>
+                     <h3>Dialogue Manager</h3>
+                     <p><b>Dialogue Manager</b> contains all the scripts responsible for executing dialogues</p>
+                     <h5>Dialogue Event Manager.cs</h5>
+                     <p>Handles the execution of Event Nodes</p>
+                     <p>Appropriate code can be added to it to expand the functionality of Events; in the future, there will be several examples of expanding this script</p>
+                     <h5>Dialogue UI Manager.cs</h5>
+                     <p>Handles the management of the UI displayed during dialogue</p>
+                     <ul class="changelog long-badge">
+                        <li>
+                           <span class="badge">Enable Type Writing</span>
+                           Enables Type Writing Animation
+                        </li>
+                        <li>
+                           <span class="badge">Typing Speed</span>
+                           Typing Speed for Type Writing Animation (X/sec)
+                        </li>
+                        <li>
+                           <span class="badge">Dialogue Canvas</span>
+                           Main UI Object
+                        </li>
+                        <li>
+                           <span class="badge">Text Box</span>
+                           Text box where dialogue text is displayed
+                        </li>
+                        <li>
+                           <span class="badge">Timer Slider</span>
+                           Slider indicating the choice time
+                        </li>
+                        <li>
+                           <span class="badge">Button Prefab</span>
+                           Button Prefab used for choices
+                        </li>
+                        <li>
+                           <span class="badge">Button Container</span>
+                           Object where buttons appear
+                        </li>
+                     </ul>
+                     <h5>Dialogue Manager.cs</h5>
+                     <p>Dialogue Manager is responsible for processing the Dialogue File</p>
+                     <p>By referring to this script, you can change the dialogue and also initiate dialogue</p>
+                     <ul class="changelog long-badge">
+                        <li>
+                           <span class="badge">Localization Manager</span>
+                           Scriptable Object containing language settings
+                        </li>
+                        <li>
+                           <span class="badge">Audio Source</span>
+                           Audio Source from which sound will be played
+                        </li>
+                        <li>
+                           <span class="badge">Start Dialogue()</span>
+                           Unity Event executed when starting the Dialogue
+                        </li>
+                        <li>
+                           <span class="badge">End Dialogue()</span>
+                           Unity Event executed when ending the Dialogue
+                        </li>
+                     </ul>
+                     <h3>Dialogue UI</h3>
+                     <p>Dialogue UI Object is the UI displayed during dialogue; you can customize it as needed or duplicate the object in the prefab, customize it, and assign it to the <code>DialogueUIManager.cs</code> script contained in the same prefab</p>
+                  </section>
+                  <hr class="divider" />
+                  <section id="howtouse_GetDialog">
+    <h2>Using Dialogue in the Game</h2>
+    <p>To set up Dialogue for a scene, you need to go through a few steps:</p>
+    <h5>1. Setup UI</h5>
+    <p>You need to prepare the Dialogue UI as described in this part of the documentation <a href="#howtouse_SetupUI">[Setup Dialogue UI]</a></p>
+    <h5>2. Interaction Object</h5>
+    <p>To use the dialogue, you must have a prepared object in the scene that can trigger the dialogue. For the purposes of the demo and documentation, I will describe an example using TriggerArea.cs, but it could be a different script allowing the use of Unity Events, for example, <code>InteractionScript.cs in <b>Hellish Battle - 2.5D Retro FPS</b></code></p>
+    <h5>3. Setting Up Unity Events</h5>
+    <p>Now we move on to the actual usage of the dialogue. You can trigger the dialogue in two different ways</p>
+    <h5>Dialogue First, Execution Next</h5>
+    <p>In this approach, we need to add 2 new elements to the UnityEvents</p>
+    <p><b>1. DialogueManager.SetupDialogue(DialogueContainerSO)</b> to which we assign the dialogue we want to execute</p>
+    <p><b>2. DialogueManager.StartDialogue</b><br>Here, we have two options: either we choose <code>StartDialogue()</code>, which will begin the dialogue from a random Start Node, or <code>StartDialogue(string)</code>, which will try to find a Start Node with the ID assigned during the script execution. If it doesn't find one, it starts the dialogue from a random Start Node</p>
+    <p class="alert alert-info">
+        <b>StartDialogue(string)</b> is only available in the <span class="badge badge-purple">Pro</span> Version
+    </p>
+    <h5>Direct Execution of Dialogue</h5>
+    <p>In this approach, we need to add a new element to the UnityEvents: <b>DialogueManager.StartDialogue(DialogueContainerSO)</b>, which assigns and immediately executes the dialogue from a random Start Node</p>
+    <p class="alert alert-info">
+        <b>Direct Execution of Dialogue</b> does not support starting the dialogue from a Start Node with a specific ID
+    </p>
+</section>
 
-						<!-- Logo -->
-						<a class="logo ml-md-3" href="index.html" title="iDocs Template"></a>
-						<span class="text-6 ml-2">MEET AND TALK- DIALOGUE SYSTEM</span>
-						<!-- Logo End -->
-
-						<!-- Navbar Toggler -->
-						<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
-							<span></span><span></span><span></span>
-						</button>
-
-						<div id="header-nav" class="collapse navbar-collapse justify-content-end">
-							<ul class="navbar-nav">
-								<li>
-									<a target="_blank" href="https://assetstore.unity.com/publishers/63085">Assets Store</a>
-								</li>
-								<li>
-									<a target="_blank" href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio Website</a>
-								</li>
-							</ul>
-						</div>
-						<ul class="social-icons social-icons-sm ml-lg-2 mr-2">
-							<li class="social-icons-github">
-								<a data-toggle="tooltip" href="https://github.com/BlyatTukan" target="_blank" title="" data-original-title="Github"
-									><i class="fab fa-github"></i
-								></a>
-							</li>
-							<li class="social-icons-discord">
-								<a data-toggle="tooltip" href="https://discord.gg/KtHKbYjBMS" target="_blank" title="" data-original-title="Discord"
-									><i class="fab fa-discord"></i
-								></a>
-							</li>
-							<li class="social-icons-youtube">
-								<a
-									data-toggle="tooltip"
-									href="https://www.youtube.com/channel/UCnhLf9kMlT55ftMMKSu5Qwg"
-									target="_blank"
-									title=""
-									data-original-title="Youtube"
-									><i class="fab fa-youtube"></i
-								></a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-				<!-- Navbar End -->
-			</header>
-			<!-- Header End -->
-
-			<!-- Content
-  ============================ -->
-			<div id="content" role="main">
-				<!-- Sidebar Navigation
-	============================ -->
-				<div class="idocs-navigation">
-					<ul class="nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link active" href="#tab_installation">Installation</a>
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="#installation_started">Getting Started</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#tab_hb_integration">Hellish Battle Integration</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#tab_node">Node</a>
-						</li>
-												<li class="nav-item">
-							<a class="nav-link" href="#tab_howtouse">How to Use</a>
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="#howtouse_dialog"> Create Dialogue</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#howtouse_character"> Create Character</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#howtouse_event"> Create Event</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#howtouse_dialogtoscene"> Add Dialog to Scene</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#tab_howtofix">How to Fix</a>
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="#howtofix_probuilder"> Warning; Behavior is Missing!</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#tab_template">More Templates</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#tab_changelog">Changelog</a>
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="#changelog_1_1_0a"> 1.1.0a</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#changelog_1_0_0b"> 1.0.0b</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#changelog_1_0_0a"> 1.0.0a</a>
-								</li>
-							</ul>
-						</li>
-						
-					</ul>
-				</div>
-
-				<!-- Docs Content
-	============================ -->
-				<div class="idocs-content">
-					<div class="container">
-						<!-- installation
-		============================ -->
-						<section id="tab_installation">
-							<h1>Documentation</h1>
-							<h2>Meet and Talk - Dialogue System</h2>
-							<!--<a class="btn btn-primary" href="https://blyattukan.github.io/hellish-battle-documentation/"><i class="fas fa-external-link-alt mr-1"></i> Online Documentation</a>-->
-							<hr />
-							<div class="row">
-								<div class="col-sm-6 col-lg-4">
-									<ul class="list-unstyled">
-										<li><strong>Version:</strong> 1.1.0a</li>
-										<li>
-											<strong>Author:</strong>
-											<a href="https://assetstore.unity.com/publishers/63085" target="_blank">Tiny Slime Studio</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-4">
-									<ul class="list-unstyled">
-										<li>
-											<strong class="font-weight-700">Created:</strong>
-											01.03.2023
-										</li>
-										<li><strong>Update:</strong> 25 May, 2023</li>
-									</ul>
-								</div>
-
-								<div class="col-sm-6 col-lg-4">
-									<ul class="list-unstyled">
-										<li><strong>File Size:</strong> ~ 1.00 MB</li>
-										<li>
-											<strong>Unity Versions:</strong>
-											2021.3.17+
-										</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- Getting Started
-		============================ -->
-						<section id="installation_started">
-							<h2>Getting Started</h2>
-							<p>Create a new 3D project.</p>
-							<p>
-								<a class="popup-img" href="assets/images/instalattion/getting_started_1.png"
-									><img class="img-fluid border" src="assets/images/instalattion/getting_started_1.png" alt=""
-								/></a>
-							</p>
-							<p>
-								From the toolbar, select
-								<code>Window -> Package Manager</code> to open the Package Manager
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/instalattion/getting_started_2.png"
-									><img class="img-fluid border" src="assets/images/instalattion/getting_started_2.png" alt=""
-								/></a>
-							</p>
-							<p>
-								From Droplist Packages: select
-								<code>My Assets</code> and search <code>Meet and Talk</code>, download and install
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/instalattion/getting_started_3.png"
-									><img class="img-fluid border" src="assets/images/instalattion/getting_started_3.png" alt=""
-								/></a>
-							</p>
-							<p>Once installed, the assets are ready to be installed</p>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- Getting Started
-		============================ -->
-						<section id="tab_hb_integration">
-							<h2>Hellish Battle Integration</h2>
-							<p class="alert alert-info mb-5">
-								Hellish Battle supports the basic version and the free version
-							</p>
-							<p>
-								The only thing you need to do to integrate Meet and Talk and Hellish Battle, you need to install Meet and Talk in the Project where Hellish Battle is located
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/localization/base.png"
-									><img class="img-fluid border" src="assets/images/integration/mat_1.png" alt=""
-								/></a>
-							</p>
-							<h4>Setup Dialog</h4>
-							<p>
-								To add a dialogue to the scene, you must set WhenInteraction() in the Interaction Script to assign a new event and find the InteractionScript.StartDialogue() function and assign the appropriate Dialogue file to it
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/localization/base.png"
-									><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt=""
-								/></a>
-							</p>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- Node
-		============================ -->
-						<section id="tab_node">
-							<h2>Node</h2>
-
-							<div class="row">
-								<div class="col-4 my-3 text-center">
-									<a
-										><img class="img-fluid border" src="assets/images/instalattion/Start.png" alt="" />
-										<h6 class="pt-2">Start Node<br /><span class="badge badge-blue">Free Version</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a
-										><img
-											class="img-fluid border"
-											src="assets/images/instalattion/Dialogue.png"
-											alt=""
-										/>
-										<h6 class="pt-2">Dialogue Node<br /><span class="badge badge-blue">Free Version</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a
-										><img
-											class="img-fluid border"
-											src="assets/images/instalattion/End.png"
-											alt=""
-										/>
-										<h6 class="pt-2">End Node<br /><span class="badge badge-blue">Free Version</span></h6>
-									</a>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-4 my-3 text-center">
-									<a
-										><img class="img-fluid border" src="assets/images/instalattion/Choice.png" alt="" />
-										<h6 class="pt-2">Choice Node<br /><span class="badge badge-blue">Free Version</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a
-										><img
-											class="img-fluid border"
-											src="assets/images/instalattion/TimerChoice.png"
-											alt=""
-										/>
-										<h6 class="pt-2">Timer Choice Node<br /><span class="badge badge-purple">Pro Version</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a
-										><img
-											class="img-fluid border"
-											src="assets/images/instalattion/Event.png"
-											alt=""
-										/>
-										<h6 class="pt-2">Event Node<br /><span class="badge badge-purple">Pro Version</span></h6>
-									</a>
-								</div>
-							</div>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- Getting Started
-								============================ -->
-						<section id="tab_howtouse">
-							<h2>How to Use</h2>
-							<p>XXX</p>
-
-							<h4 id="howtouse_dialog">Create New Dialog</h4>
-
-							<p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the <code>Dialog</code> option and
-							click <code>New Dialogue</code></p>
-							<p>Double-click on the created dialogue to edit it</p>
-							<p>You will open the dialog editing window, at the beginning you must add start Node, and at the end of the dialog you must
-							give end node <code>You can have more than one end of the dialog and at each end you must give end node</code></p>
-
-							<p>
-								<a class="popup-img" href="assets/images/CreateDialogue.png"><img class="img-fluid border"
-										src="assets/images/CreateDialogue.png" alt="" /></a>
-							</p>
-
-							<p>At the End you have to write the changes in the Dialog in the upper left corner of the editor</p>
-
-							<h4 id="howtouse_character">Create New Character</h4>
-							<p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the
-								<code>Dialog</code> option and
-								click <code>New Dialogue Character</code></p>
-
-							<h4 id="howtouse_event"><span class="badge badge-purple">Pro Version</span>  Create New Event</h4>
-							<p>If you want to create a new event You need to create a new event script, where you write your event code</p>
-
-<pre style="margin: 0">        <span class="hljs"><red-txt>using</red-txt> System.Collections;
+				  
+                  <hr class="divider" />
+                  <section id="howtouse_NewEvent">
+                     <h2><span class="badge badge-purple">Pro</span> New Event</h2>
+                     <p>If you want to create a new event You need to create a new event script, where you write your event code</p>
+                     <pre style="margin: 0">        <span class="hljs"><red-txt>using</red-txt> System.Collections;
 <red-txt>using</red-txt> System.Collections.Generic;
 <red-txt>using</red-txt> UnityEngine;
 
@@ -383,284 +629,293 @@
 }
 </span>
       </pre>
-
-							<p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the
-								<code>Dialog</code> option, hover over the
-								<code>Event</code> option and
-								click <code>YOUR_NAME</code></p>
-
-							<h4>Update 1.1.0a</h4>
-							<p>Now you can edit Event values directly in the Editor, after assigning an <code>EventSO</code> below you will see a list of all the supported values you can edit</p>
-							<h5>Supported Values Type:</h5>
-							<p><span class="badge badge-purple">Int</span> <span class="badge badge-purple">Float</span> <span class="badge badge-purple">String</span> <span class="badge badge-purple">Bool</span> <span class="badge badge-purple">Enum</span> <span class="badge badge-purple">Color</span> <span class="badge badge-purple">Gradient</span> <span class="badge badge-purple">Object</span> <span class="badge badge-purple">Animation Curve</span> <span class="badge badge-purple">Vector 2</span> <span class="badge badge-purple">Vector 2 Int</span> <span class="badge badge-purple">Vector 3</span> <span class="badge badge-purple">Vector 3 Int</span> <span class="badge badge-purple">Vector 4</span></p>
-
-							<h4 id="howtouse_dialogtoscene">Add New Dialog to Scene</h4>
-							<p>To add a new dialogue to a scene <code>using demo scene as an example</code></p>
-							<p>You need to find an object that can call a function <code>in this case Trigger Area</code></p>
-							<p>To the <code>OnEnter()</code> element add a DialogueManager object and in it find <code>DialogueManager.StartDialogue()</code> and in it click on
-							the dialogue you want to put on the page</p>
-						</section>
-						
-						<hr class="divider" />
-
-						<!-- Getting Started
-								============================ -->
-						<section id="tab_howtofix">
-							<h2>How To Fix</h2>
-							<h4 id="howtofix_missingbehavior"><span class="badge badge-yellow">Warning: </span>Behavior is Missing!</h4>
-							<p>Create a new 3D project.</p>
-							<p>
-								From the toolbar, select
-								<code>Window -> Package Manager</code> to open the Package Manager
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/instalattion/getting_started_2.png"><img class="img-fluid border"
-										src="assets/images/instalattion/getting_started_2.png" alt="" /></a>
-							</p>
-							<p>
-								From Droplist Packages: select
-								<code>Unity Register</code> and search <code>ProBuilder</code>, download and install
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/ProBuilder.png"><img class="img-fluid border"
-										src="assets/images/ProBuilder.png" alt="" /></a>
-							</p>
-						</section>
-						
-						<hr class="divider" />
-
-						
-						<section id="tab_howtouse">
-							<h2>How to Use?</h2>
-
-							<h4>Setup Dialog</h4>
-							
-							<p>
-								<a class="popup-img" href="assets/images/localization/base.png"
-									><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt=""
-								/></a>
-							</p>
-						</section>
-
-						<hr class="divider" />
-
-						
-						<section id="tab_howtofix">
-							<h2>How to Fix?</h2>
-							<h4><span class="badge badge-yellow">Warning:</span> Behavior is Missing!</h4>
-							<p>
-								If after installing Meet and Talk you get a message in the console saying <code>Behavior is missing!</code> you probably need to install the ProBuilder package which you can install at <code>Window</code> -> <code>Package Manager</code> -> <code>Packages: Unity Register</code> and here you need to search for <code>Pro Builder</code>
-							</p>
-							<p>
-								<a class="popup-img" href="assets/images/ProBuilder.png"
-									><img class="img-fluid border" src="assets/images/ProBuilder.png" alt=""
-								/></a>
-							</p>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- More Templates
-		============================ -->
-						<section id="tab_template">
-							<h2>More Templates</h2>
-
-							<div class="row">
-								<div class="col-4 my-3 text-center">
-									<a target="_blank" href="https://assetstore.unity.com/packages/templates/systems/draw-the-line-game-template-215203"
-										><img class="img-fluid border" src="assets/images/draw-the-line.png" alt="" />
-										<h6 class="pt-2">Draw The Line - Game Template<br /><span class="badge badge-green">4,99$</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a target="_blank" href="https://u3d.as/2VXG"
-										><img
-											class="img-fluid border"
-											src="https://assetstorev1-prd-cdn.unity3d.com/key-image/bea3b6ad-cf3e-4264-a65e-9e502595fe95.webp"
-											alt=""
-										/>
-										<h6 class="pt-2">Loot Table - Universal Loot System<br /><span class="badge badge-green">Free</span></h6>
-									</a>
-								</div>
-								<div class="col-4 my-3 text-center">
-									<a target="_blank" href="https://u3d.as/2Nyc"
-										><img
-											class="img-fluid border"
-											src="https://assetstorev1-prd-cdn.unity3d.com/key-image/39fe388a-0dd8-4012-afb3-c6dce2e57541.webp"
-											alt=""
-										/>
-										<h6 class="pt-2">Hellish Battle - 2.5D Retro FPS<br /><span class="badge badge-green">9.99$</span></h6>
-									</a>
-								</div>
-							</div>
-						</section>
-
-						<hr class="divider" />
-
-						<!-- Changelog
-		============================ -->
-
-						<section id="tab_changelog">
-							<h2>Changelog</h2>
-							<p class="text-4">See what has been added, changed in updates.</p>
-							<p class="alert alert-info mb-5">
-								Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
-								<a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
-							</p>
-
-							<h3 id="changelog_1_1_0a">
-								Version 1.1.0a
-								<small class="text-muted">25 May, 2023</small>
-							</h3>
-							<ul class="changelog">
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-purple">Pro Version</span>
-									Better Event Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Random Start Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Selectable Editor Theme
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Possibility of not using the character's name with dialogues
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Add New Font DigitalDisco.ttf
-								</li>
-								<li>
-									<span class="badge badge-red">Fix</span>
-									Fix Warning when dialog didn't have audio
-								</li>
-							</ul>
-
-							<h3 id="changelog_1_0_0b">
-								Version 1.0.0b
-								<small class="text-muted">07 April, 2023</small>
-							</h3>
-							<ul class="changelog">
-								<li>
-									<span class="badge badge-orange">Integration</span>
-									<span class="badge badge-blue">Free Version</span>
-									Hellish Battle Integration
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Skil Button
-								</li>
-								<li>
-									<span class="badge badge-red">Fix</span>
-									<span class="badge badge-blue">Free Version</span>
-									Fix Few Bugs
-								</li>
-							</ul>
-
-							<h3 id="changelog_1_0_0a">
-								Version 1.0.0a
-								<small class="text-muted">01 March, 2023</small>
-							</h3>
-							<ul class="changelog">
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Dialogue Window
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Start Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									End Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Dialogue Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Choice Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Character SO
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Localization
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-blue">Free Version</span>
-									Audio
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-purple">Pro Version</span>
-									Timer Choice Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-purple">Pro Version</span>
-									Event Node
-								</li>
-								<li>
-									<span class="badge badge-green">Added</span>
-									<span class="badge badge-purple">Pro Version</span>
-									Dialogue SO Custom Editor
-								</li>
-							</ul>
-						</section>
-					</div>
-				</div>
-			</div>
-			<!-- Content end -->
-
-			<!-- Footer
-  ============================ -->
-			<footer id="footer" class="section bg-dark footer-text-light">
-				<div class="container">
-					<p class="text-center">
-						Copyright &copy; 2022 - 2023
-						<a href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio</a>. All Rights Reserved.
-					</p>
-				</div>
-			</footer>
-			<!-- Footer end -->
-		</div>
-		<!-- Document Wrapper end -->
-
-		<!-- Back To Top -->
-		<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
-
-		<!-- JavaScript
-============================ -->
-		<script src="assets/vendor/jquery/jquery.min.js"></script>
-		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- Highlight JS -->
-		<script src="assets/vendor/highlight.js/highlight.min.js"></script>
-		<!-- Easing -->
-		<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-		<!-- Magnific Popup -->
-		<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<!-- Custom Script -->
-		<script src="assets/js/theme.js"></script>
-	</body>
+                     <p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the
+                        <code>Dialog</code> option, hover over the
+                        <code>Event</code> option and
+                        click <code>YOUR_NAME</code>
+                     </p>
+                     <p>Now you can edit Event values directly in the Editor, after assigning an <code>EventSO</code> below you will see a list of all the supported values you can edit</p>
+                     <h5>Supported Values Type:</h5>
+                     <p class="long-badge"><span class="badge badge-purple">Int</span> <span class="badge badge-purple">Float</span> <span class="badge badge-purple">String</span> <span class="badge badge-purple">Bool</span> <span class="badge badge-purple">Enum</span> <span class="badge badge-purple">Color</span> <span class="badge badge-purple">Gradient</span> <span class="badge badge-purple">Object</span> <span class="badge badge-purple">Animation Curve</span> <span class="badge badge-purple">Vector 2</span> <span class="badge badge-purple">Vector 2 Int</span> <span class="badge badge-purple">Vector 3</span> <span class="badge badge-purple">Vector 3 Int</span> <span class="badge badge-purple">Vector 4</span></p>
+                  </section>
+                  <hr class="divider" />
+                  <!-- Getting Started
+                     ============================ -->
+                  <section id="tab_integration"></section>
+                  <section id="integration_hellish_battle">
+                     <h2>Hellish Battle Integration</h2>
+                     <a class="popup-img" href="https://blyattukan.github.io/hellish-battle-documentation/assets/images/Cover.png"
+                        ><img class="img-fluid border" src="https://blyattukan.github.io/hellish-battle-documentation/assets/images/Cover.png" alt=""
+                        /></a>
+                     <p class="alert alert-info mb-5">
+                        <b>Hellish Battle - 2.5D Retro FPS</b> supports <span class="badge badge-blue">Free</span>and  <span class="badge badge-purple">Pro</span> Version
+                     </p>
+                     <p>
+                        The only thing you need to do to integrate Meet and Talk and Hellish Battle, you need to install Meet and Talk in the Project where Hellish Battle is located
+                     </p>
+                     <p>
+                        <a class="popup-img" href="assets/images/localization/base.png"
+                           ><img class="img-fluid border" src="assets/images/integration/mat_1.png" alt=""
+                           /></a>
+                     </p>
+                     <h4>Setup Dialog</h4>
+                     <p>
+                        To Add Dialogue to your scene, you must, in the <code>InteractionScript.cs</code> in the WhenInteraction() field, add the appropriate script call which is described here <a href="#howtouse_GetDialogue">[Use Dialogue in Game]</a>
+                     </p>
+                     <p>
+                        <a class="popup-img" href="assets/images/localization/base.png"
+                           ><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt=""
+                           /></a>
+                     </p>
+                  </section>
+                  <hr class="divider" />
+                  <section id="integration_UHFPS">
+                     <h2>Ultimate Horror FPS Kit</h2>
+                     <a class="popup-img" href="https://assetstorev1-prd-cdn.unity3d.com/key-image/e1864b72-8dec-422c-a04b-d3bcb5dda09c.webp"
+                        ><img class="img-fluid border" src="https://assetstorev1-prd-cdn.unity3d.com/key-image/e1864b72-8dec-422c-a04b-d3bcb5dda09c.webp" alt=""
+                        /></a>
+                     <p class="alert alert-info">
+                        <b>Ultimate Horro FPS Kit</b> supports <span class="badge badge-blue">Free</span>and  <span class="badge badge-purple">Pro</span> Version
+                     </p>
+                     <p class="alert alert-info mb-5">
+                        The integration with <b>Ultimate Horror FPS Kit</b> has been made possible thanks to the generosity of <b>ThunderWire</b>, who provided instructions for integrating their asset with mine.
+                     </p>
+                     <p>
+                        To access the integration instructions for UHFPS with Meet and Talk, please refer to the UHFPS documentation (link below) to go through all the steps:
+                        <br><br><a href="https://docs.twgamesdev.com/uhfps/integrations/meet-and-talk" target="_blank">[Ultimate Horror FPS Documentation]</a>
+                        <br><a href="https://assetstore.unity.com/packages/templates/systems/uhfps-ultimate-horror-fps-kit-254506" target="_blank">[Ultimate Horror FPS Asset Store]</a>
+                     </p>
+                  </section>
+                  <hr class="divider" />
+                  <!-- More Templates
+                     ============================ -->
+                  <section id="tab_template">
+                     <h2>More Templates</h2>
+                     <div class="row">
+                        <div class="col-4 my-3 text-center">
+                           <a target="_blank" href="https://assetstore.unity.com/packages/templates/systems/draw-the-line-game-template-215203"
+                              >
+                              <img class="img-fluid border" src="assets/images/draw-the-line.png" alt="" />
+                              <h6 class="pt-2">Draw The Line - Game Template<br /><span class="badge badge-green">4,99$</span></h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a target="_blank" href="https://u3d.as/2VXG"
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="https://assetstorev1-prd-cdn.unity3d.com/key-image/bea3b6ad-cf3e-4264-a65e-9e502595fe95.webp"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Loot Table - Universal Loot System<br /><span class="badge badge-green">Free</span></h6>
+                           </a>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                           <a target="_blank" href="https://u3d.as/2Nyc"
+                              >
+                              <img
+                                 class="img-fluid border"
+                                 src="https://blyattukan.github.io/hellish-battle-documentation/assets/images/Cover.png"
+                                 alt=""
+                                 />
+                              <h6 class="pt-2">Hellish Battle - 2.5D Retro FPS<br /><span class="badge badge-green">9.99$</span></h6>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  <hr class="divider" />
+                  <!-- Changelog
+                     ============================ -->
+                  <section id="tab_changelog">
+                     <h2>Changelog</h2>
+                     <p class="text-4">See what has been added, changed in updates.</p>
+                     <p class="alert alert-info mb-5">
+                        Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
+                        <a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
+                     </p>
+                     <h3 id="changelog_1_2_0a">
+                        Version 1.2.0a
+                        <small class="text-muted">25 August, 2023</small>
+                     </h3>
+                     <ul class="changelog">
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Command Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Random Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Start ID
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Typing Animation
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Click Button to next Dialog
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Better Naming
+                        </li>
+                     </ul>
+                     <h3 id="changelog_1_1_0a">
+                        Version 1.1.0a
+                        <small class="text-muted">25 May, 2023</small>
+                     </h3>
+                     <ul class="changelog">
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span> Better Event Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Random Start Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Selectable Editor Theme
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Possibility of not using the character's name with dialogues
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Add New Font DigitalDisco.ttf
+                        </li>
+                        <li>
+                           <span class="badge badge-red">Fix</span>
+                           Fix Warning when dialog didn't have audio
+                        </li>
+                     </ul>
+                     <h3 id="changelog_1_0_0b">
+                        Version 1.0.0b
+                        <small class="text-muted">07 April, 2023</small>
+                     </h3>
+                     <ul class="changelog">
+                        <li>
+                           <span class="badge badge-orange">Integration</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Hellish Battle Integration
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Skil Button
+                        </li>
+                        <li>
+                           <span class="badge badge-red">Fix</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Fix Few Bugs
+                        </li>
+                     </ul>
+                     <h3 id="changelog_1_0_0a">
+                        Version 1.0.0a
+                        <small class="text-muted">01 March, 2023</small>
+                     </h3>
+                     <ul class="changelog">
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Dialogue Window
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Start Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           End Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Dialogue Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Choice Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Character SO
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Localization
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Audio
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Timer Choice Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Event Node
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Dialogue SO Custom Editor
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+            </div>
+         </div>
+         <!-- Content end -->
+         <!-- Footer
+            ============================ -->
+         <footer id="footer" class="section bg-dark footer-text-light">
+            <div class="container">
+               <p class="text-center">
+                  Copyright &copy; 2022 - 2023
+                  <a href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio</a>. All Rights Reserved.
+               </p>
+            </div>
+         </footer>
+         <!-- Footer end -->
+      </div>
+      <!-- Document Wrapper end -->
+      <!-- Back To Top -->
+      <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+      <!-- JavaScript
+         ============================ -->
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Highlight JS -->
+      <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+      <!-- Easing -->
+      <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+      <!-- Magnific Popup -->
+      <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+      <!-- Custom Script -->
+      <script src="assets/js/theme.js"></script>
+   </body>
 </html>
