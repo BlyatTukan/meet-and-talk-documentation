@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no_print">
+<html lang="en" class="print">
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -156,6 +156,9 @@
                         <li class="nav-item">
                            <a class="nav-link" href="#howtouse_NewEvent"><span class="badge badge-purple">PRO</span> New Event</a>
                         </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#howtouse_NewEmotion"><span class="badge badge-purple">PRO</span> New Character Emotion</a>
+                        </li>
                      </ul>
                   </li>
                   <li class="nav-item">
@@ -175,6 +178,9 @@
                   <li class="nav-item">
                      <a class="nav-link" href="#tab_changelog">Changelog</a>
                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#changelog_1_3_0a"> 1.3.0a</a>
+                        </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#changelog_1_2_0a"> 1.2.0a</a>
                         </li>
@@ -373,6 +379,14 @@
             <span class="badge">Character SO</span>
             Name of the character delivering the dialogue.
         </li>
+         <li>
+            <span class="badge">Avatar Position</span>
+            Character Avatar Position, Left, Right, or No Avatar Display
+         </li>
+         <li>
+            <span class="badge">Avatar Emotion</span>
+            One of the available Character Emotion options
+         </li>
         <li>
             <span class="badge">Displayed Text</span>
             Text displayed when the node begins.
@@ -397,6 +411,15 @@
             <span class="badge">Character SO</span>
             Name of the character delivering the dialogue.
         </li>
+         <li>
+            <span class="badge">Avatar Position</span>
+            Character Avatar Position, Left, Right, or No Avatar Display
+         </li>
+         <li>
+            <span class="badge">Avatar Emotion</span>
+            One of the available Character Emotion options
+         </li>
+
         <li>
             <span class="badge">Displayed Text</span>
             Text displayed when the node begins.
@@ -445,6 +468,14 @@
          <span class="badge">Character SO</span>
          Name of the character delivering the dialogue
       </li>
+         <li>
+            <span class="badge">Avatar Position</span>
+            Character Avatar Position, Left, Right, or No Avatar Display
+         </li>
+         <li>
+            <span class="badge">Avatar Emotion</span>
+            One of the available Character Emotion options
+         </li>
       <li>
          <span class="badge">Displayed Text</span>
          Text displayed at the start of the node
@@ -639,6 +670,13 @@
                      <p class="long-badge"><span class="badge badge-purple">Int</span> <span class="badge badge-purple">Float</span> <span class="badge badge-purple">String</span> <span class="badge badge-purple">Bool</span> <span class="badge badge-purple">Enum</span> <span class="badge badge-purple">Color</span> <span class="badge badge-purple">Gradient</span> <span class="badge badge-purple">Object</span> <span class="badge badge-purple">Animation Curve</span> <span class="badge badge-purple">Vector 2</span> <span class="badge badge-purple">Vector 2 Int</span> <span class="badge badge-purple">Vector 3</span> <span class="badge badge-purple">Vector 3 Int</span> <span class="badge badge-purple">Vector 4</span></p>
                   </section>
                   <hr class="divider" />
+                  <section id="howtouse_NewEmotion">
+                     <h2><span class="badge badge-purple">Pro</span> New Character Emotion</h2>
+                     <p>In Character SO, you can assign avatars that you can display during dialogue. To add new emotions, you need to open <code>DialogueCharacterSO.cs</code>. At the very bottom of the script, there's an enum named <b>AvatarType</b>. Here, you can add new emotions. <code>Remember to assign them an ID, which must be the next number after the last variable.</code></p>
+<p>After saving, new fields with the added emotions will be automatically added to the created CharacterSO.</p>
+<p>Remember to add left and right sprites for each of the available emotions.</p></p>
+                  </section>
+                  <hr class="divider" />
                   <!-- Getting Started
                      ============================ -->
                   <section id="tab_integration"></section>
@@ -733,6 +771,41 @@
                         Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
                         <a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
                      </p>
+                                          <h3 id="changelog_1_3_0a">
+                        Version 1.3.0a
+                        <small class="text-muted">02 September, 2023</small>
+                     </h3>
+                     <ul class="changelog">
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Character Avatar
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Avatar Emotions
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-purple short-badge">Pro</span>
+                           Type Writing Support Rich Text
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Auto Save Dialogue
+                        </li>
+                        <li>
+                           <span class="badge badge-green">Added</span>
+                           <span class="badge badge-blue short-badge">Free</span>
+                           Hide Skip Button on Choice
+                        </li>
+                        <li>
+                           <span class="badge badge-red">Fix</span>
+                           Fix Link Break Error
+                        </li>
+                     </ul>
                      <h3 id="changelog_1_2_0a">
                         Version 1.2.0a
                         <small class="text-muted">25 August, 2023</small>
