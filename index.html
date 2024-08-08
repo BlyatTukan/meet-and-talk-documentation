@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
 		<link href="assets/images/favicon.png" rel="icon" />
 		<title>Meet and Talk | Online Documentation</title>
-		<meta name="description" content="Online Documentation to Hellish Battle" />
-		<meta name="keywords" content="Hellish Battle, Hellish, Battle, Tiny Slime, Tiny Slime Studio, Assets, FPS, Retro FPS, Retro, Asset Store, Doom, 2.5D, 2.5D FPS, Documentation, Hellish Documentation, Hellish Battle Documentation" />
+		<meta name="description" content="Online Documentation to Meet and Talk" />
+		<meta name="keywords" content="Meet and Talk, Meet and Talk Free, Meet and Talk Pro, Dialogue, Dialogue Documentation" />
 		<meta name="author" content="TIny Slime Studio" />
 		<!-- Stylesheet
          ============================== -->
@@ -53,7 +53,10 @@
 						<!-- Sidebar Toggler -->
 						<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 						<!-- Logo -->
-						<a class="logo ml-md-3" href="index.html" title="iDocs Template"></a>
+						<a class="logo ml-md-3" href="index.html" title="Meet and Talk">
+							<img src="assets/images/icon.png" height="36" width="36">
+						</a>
+
 						<span class="text-6 ml-2">MEET AND TALK- DIALOGUE SYSTEM</span>
 						<!-- Logo End -->
 						<!-- Navbar Toggler -->
@@ -181,6 +184,9 @@
 							<a class="nav-link" href="#tab_changelog">Changelog</a>
 							<ul class="nav flex-column">
 								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_7_0a"> 1.7.0a</a>
+								</li>
+								<li class="nav-item">
 									<a class="nav-link" href="#changelog_1_6_0a"> 1.6.0a</a>
 								</li>
 								<li class="nav-item">
@@ -226,7 +232,7 @@
 							<div class="row">
 								<div class="col-sm-6 col-lg-4">
 									<ul class="list-unstyled">
-										<li><strong>Version:</strong> 1.6.0a</li>
+										<li><strong>Version:</strong> 1.7.0a</li>
 										<li>
 											<strong>Author:</strong>
 											<a href="https://assetstore.unity.com/publishers/63085" target="_blank">Tiny Slime Studio</a>
@@ -239,12 +245,12 @@
 											<strong class="font-weight-700">Created:</strong>
 											01 March, 2023
 										</li>
-										<li><strong>Update:</strong> 29 May, 2024</li>
+										<li><strong>Update:</strong> 08 August, 2024</li>
 									</ul>
 								</div>
 								<div class="col-sm-6 col-lg-4">
 									<ul class="list-unstyled">
-										<li><strong>File Size:</strong> ~20 MB</li>
+										<li><strong>File Size:</strong> ~25 MB</li>
 										<li>
 											<strong>Unity Versions:</strong>
 											2021.3.17+
@@ -283,6 +289,7 @@
                      ============================ -->
 						<section id="tab_node">
 							<h2>Node</h2>
+
 							<div class="row">
 								<div class="col-4 my-3 text-center">
 									<a>
@@ -347,160 +354,341 @@
 
 						<hr class="divider" />
 						<section id="node_start">
-							<h2>Start Node</h2>
-							<p>
-								The Start Node is used to initiate a dialogue. If you want the dialogue to begin from one of several predefined points, add multiple Start Nodes. You can also assign a Start Node ID, which allows you to invoke a specific
-								beginning of the dialogue without the need to create multiple copies of the same dialogue.
-							</p>
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media">
+								<img src="assets/images/node/Start.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Start Node</h2>
+								  The Start Node is used to initiate a dialogue. If you want the dialogue to begin from one of several predefined points, add multiple Start Nodes.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Start ID</td>
+									<td class="align-middle">OPIS</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
 						</section>
 						<hr class="divider" />
 						<section id="node_dialogue">
-							<h2>Dialogue Node</h2>
-							<p>The Dialogue Node is a fundamental node for displaying text. It allows assigning the speaker for the current line, associating an audio clip, and setting display time.</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Audio Clip</span>
-									Audio played when the node begins.
-								</li>
-								<li>
-									<span class="badge">Character SO</span>
-									Name of the character delivering the dialogue.
-								</li>
-								<li>
-									<span class="badge">Avatar Position</span>
-									Character Avatar Position, Left, Right, or No Avatar Display
-								</li>
-								<li>
-									<span class="badge">Avatar Emotion</span>
-									One of the available Character Emotion options
-								</li>
-								<li>
-									<span class="badge">Displayed Text</span>
-									Text displayed when the node begins.
-								</li>
-								<li>
-									<span class="badge">Display Time</span>
-									Time after which it automatically transitions to the next node.
-									<br /><code class="new-line">[if 0, manual transition is required]</code>
-								</li>
-							</ul>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Dialogue.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Dialogue Node</h2>
+								  The Dialogue Node is a fundamental node for displaying text. It allows assigning the speaker for the current line, associating an audio clip, and setting display time.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Audio Clip</td>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Character SO</td>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Position</td>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Emotion</td>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Displayed Text</td>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Display Time</td>
+									<td class="align-middle">
+										Time after which it automatically transitions to the next node.
+										<br /><code class="new-line">[if 0, manual transition is required]</code></td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
 						</section>
 						<hr class="divider" />
 						<section id="node_choice">
-							<h2>Choice Node</h2>
-							<p>The Choice Node functions similarly to the Dialogue Node, but the player must select one of the available responses.</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Audio Clip</span>
-									Audio played when the node begins.
-								</li>
-								<li>
-									<span class="badge">Character SO</span>
-									Name of the character delivering the dialogue.
-								</li>
-								<li>
-									<span class="badge">Avatar Position</span>
-									Character Avatar Position, Left, Right, or No Avatar Display
-								</li>
-								<li>
-									<span class="badge">Avatar Emotion</span>
-									One of the available Character Emotion options
-								</li>
 
-								<li>
-									<span class="badge">Displayed Text</span>
-									Text displayed when the node begins.
-								</li>
-								<li>
-									<span class="badge">Time to Display Option</span>
-									Time after which the options will be displayed.
-								</li>
-							</ul>
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Choice.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Choice Node</h2>
+								  The Choice Node functions similarly to the Dialogue Node, but the player must select one of the available responses.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Audio Clip</td>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Character SO</td>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Position</td>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Emotion</td>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Displayed Text</td>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Time to Display Option</td>
+									<td class="align-middle">
+										Time after which the options will be displayed.</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+							  
 							<p>To add options, click <b>+ Add Choice Option</b> in the top right corner of the Node.</p>
 						</section>
 
 						<hr class="divider" />
 						<section id="node_end">
-							<h2>End Node</h2>
-							<p>The End Node is used to conclude a dialogue, but it has several additional options</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">End</span>
-									Ends the Dialogue
-								</li>
-								<li>
-									<span class="badge">Repeat</span>
-									Repeats the last displayed Node
-								</li>
-								<li>
-									<span class="badge">GoBack</span>
-									Repeats the second-to-last displayed Node
-								</li>
-								<li>
-									<span class="badge">ReturnToStart</span>
-									Returns to a random Start Node
-								</li>
-							</ul>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/End.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">End Node</h2>
+								  The End Node is used to conclude a dialogue, but it has several additional options
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Options</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">End</td>
+									<td class="align-middle">Ends the Dialogue</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Repeat</td>
+									<td class="align-middle">Repeats the last displayed Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Pro</span></th>
+									<td class="align-middle">Go Back</td>
+									<td class="align-middle">Repeats the second-to-last displayed Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Pro</span></th>
+									<td class="align-middle">Return To Start</td>
+									<td class="align-middle">Returns to a random Start Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Start Dialogue</td>
+									<td class="align-middle">Start New Dialogue from DialogueContainerSO</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
 						</section>
 						<hr class="divider" />
 						<section id="node_timer">
-							<h2><span class="badge badge-purple">Pro</span> Timer Choice Node</h2>
-							<p>The Timer Choice Node works similarly to the Choice Node, but if the player does not select a response within a specified time, the system will automatically proceed to the assigned node</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Audio Clip</span>
-									Audio played at the start of the node
-								</li>
-								<li>
-									<span class="badge">Character SO</span>
-									Name of the character delivering the dialogue
-								</li>
-								<li>
-									<span class="badge">Avatar Position</span>
-									Character Avatar Position, Left, Right, or No Avatar Display
-								</li>
-								<li>
-									<span class="badge">Avatar Emotion</span>
-									One of the available Character Emotion options
-								</li>
-								<li>
-									<span class="badge">Displayed Text</span>
-									Text displayed at the start of the node
-								</li>
-								<li>
-									<span class="badge">Time to Display Option</span>
-									Time after which the options will be displayed
-								</li>
-								<li>
-									<span class="badge">Time to Make Decision</span>
-									Time player has to make a decision
-								</li>
-							</ul>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Timer.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Timer Choice Node</h2>
+								  The Timer Choice Node works similarly to the Choice Node, but if the player does not select a response within a specified time, the system will automatically proceed to the assigned node
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle">Audio Clip</th>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Character SO</th>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Avatar Position</th>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Avatar Emotion</th>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Displayed Text</th>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Time to Display Option</th>
+									<td class="align-middle">Time after which the options will be displayed.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Time to Make Decision</th>
+									<td class="align-middle">Time player has to make a decision</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
+							  
+							<div class="alert alert-info mb-4" role="alert">
+								<span class="badge badge-orange text-uppercase">Remember</span>
+								The first added port corresponds to the transition if the player does not select any option
+							</div>
 							<p>To add choices, you need to click <b>+ Add Choice Option</b> in the top right corner of the Node</p>
-							<code>The first added port corresponds to the transition if the player does not select any option</code>
 						</section>
 						<hr class="divider" />
 
 						<section id="node_event">
-							<h2><span class="badge badge-purple">Pro</span> Event Node</h2>
-							<p>The Event Node does not display any information for the player but is used to execute assigned events.</p>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Event.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Event Node</h2>
+								  The Event Node does not display any information for the player but is used to execute assigned events.
+								</div>
+							</div>
+
+							<h2></h2>
+							
 							<p>To add a new Event, you need to click the <b>+ Add Event</b> option in the top corner of the Node and assign a previously created event to it or automatically create an event from the Node's position.</p>
 						</section>
 						<hr class="divider" />
 						<section id="node_random">
-							<h2><span class="badge badge-purple">Pro</span> Random Node</h2>
-							<p>The Random Node has a simple task; when executed, it randomly selects a different Node.</p>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Random.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Random Node</h2>
+								  The Random Node has a simple task; when executed, it randomly selects a different Node.
+								</div>
+							</div>
+
+							<h2></h2>
+							
 							<p>To add a Random dialog, you need to click the <b>+ Add Option</b> option in the upper right corner of the node and assign the next Node to it.</p>
 						</section>
 						<hr class="divider" />
 						<section id="node_if">
-							<h2><span class="badge badge-purple">Pro</span> IF Node</h2>
-							<p>If Node checks whether the selected value with the given requirements returns true or false.</p>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/IF.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> IF Node</h2>
+								  If Node checks whether the selected value with the given requirements returns true or false.
+								</div>
+							</div>
+
+							<h2></h2>
 						</section>
 						<hr class="divider" />
 						<section id="node_command">
-							<h2><span class="badge badge-purple">Pro</span> Command Node</h2>
-							<p>The Command Node is used for creating comments in the editor. It can help in organizing large dialogs and make it easier to identify which part of the dialog it is.</p>
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Command.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Comment Node</h2>
+								  The Commend Node is used for creating comments in the editor. It can help in organizing large dialogs and make it easier to identify which part of the dialog it is.
+								</div>
+							</div>
+
+							<h2></h2>
+							
 						</section>
 						<hr class="divider" />
 
@@ -521,92 +709,217 @@
 							<p>At the End you have to write the changes in the Dialog in the upper left corner of the editor</p>
 						</section>
 						<hr class="divider" />
+
+
 						<section id="howtouse_NewCharacter">
 							<h2>Create New Character</h2>
 							<p>In the Hierarchy Tab, right-click, and in the pop-up window click <br /><code>Create -> Dialogue -> New Dialogue Character</code></p>
 							<p>In the Inspector tab, you will see all the options available for the character</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Character Name</span>
-									Here you set the name in each available language
-								</li>
-								<li>
-									<span class="badge">Text Color</span>
-									Here you set the color that the character's name should have
-								</li>
-							</ul>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Version</th>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										<td class="align-middle">Character Name</td>
+										<td class="align-middle">Here you set the name in each available language</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+										<td class="align-middle">Use Global Value as Name</td>
+										<td class="align-middle">Toggle enabling the ability to assign a dynamic character name</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+										<td class="align-middle">Dynamic Character Name</td>
+										<td class="align-middle">List of Strings with Global Value that is to appear as character name</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										<td class="align-middle">Text Color</td>
+										<td class="align-middle">Here you set the color that the character's name should have</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  </div>
+
+								  <div class="alert alert-info mb-4" role="alert">
+									<span class="badge badge-purple text-uppercase">Pro Only</span>
+									<a href="#howtouse_NewEmotion">Here</a> you can find part of the documentation dedicated to Character Avatars
+								</div>
+
+
 						</section>
 						<hr class="divider" />
+
 						<section id="howtouse_SetupUI">
 							<h2>Setup Dialogue UI</h2>
 							<p>To set up the Dialogue UI, you need to drag the <code>Meet and Talk</code> Prefab from the <code>Assets -> Meet and Talk -> Example</code> folder into the scene where you want to use the Dialogue System</p>
 							<p class="alert alert-info">The Prefab can also be dragged, for example, into a player prefab, allowing for faster usage across multiple scripts</p>
-							<p>The Meet and Talk.prefab contains two main objects responsible for the system's functionality</p>
-							<h3>Dialogue Manager</h3>
+
+							<!--<h3>Dialogue Manager</h3>
 							<p><b>Dialogue Manager</b> contains all the scripts responsible for executing dialogues</p>
+							
 							<h5>Dialogue Event Manager.cs</h5>
 							<p>Handles the execution of Event Nodes</p>
-							<p>Appropriate code can be added to it to expand the functionality of Events; in the future, there will be several examples of expanding this script</p>
+							<p>Znajduje się w nim lista Scene Events która umożliwia utworzenie Eventów które wpływają na Scenę ale inne Systemy i Skrypty</p>
+							
 							<h5>Dialogue UI Manager.cs</h5>
-							<p>Handles the management of the UI displayed during dialogue</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Enable Type Writing</span>
-									Enables Type Writing Animation
-								</li>
-								<li>
-									<span class="badge">Typing Speed</span>
-									Typing Speed for Type Writing Animation (X/sec)
-								</li>
-								<li>
-									<span class="badge">Dialogue Canvas</span>
-									Main UI Object
-								</li>
-								<li>
-									<span class="badge">Text Box</span>
-									Text box where dialogue text is displayed
-								</li>
-								<li>
-									<span class="badge">Timer Slider</span>
-									Slider indicating the choice time
-								</li>
-								<li>
-									<span class="badge">Button Prefab</span>
-									Button Prefab used for choices
-								</li>
-								<li>
-									<span class="badge">Button Container</span>
-									Object where buttons appear
-								</li>
-							</ul>
-							<h5>Dialogue Manager.cs</h5>
-							<p>Dialogue Manager is responsible for processing the Dialogue File</p>
-							<p>By referring to this script, you can change the dialogue and also initiate dialogue</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Localization Manager</span>
-									Scriptable Object containing language settings
-								</li>
-								<li>
-									<span class="badge">Audio Source</span>
-									Audio Source from which sound will be played
-								</li>
-								<li>
-									<span class="badge">Start Dialogue()</span>
-									Unity Event executed when starting the Dialogue
-								</li>
-								<li>
-									<span class="badge">End Dialogue()</span>
-									Unity Event executed when ending the Dialogue
-								</li>
-							</ul>
-							<h3>Dialogue UI</h3>
-							<p>
-								Dialogue UI Object is the UI displayed during dialogue; you can customize it as needed or duplicate the object in the prefab, customize it, and assign it to the <code>DialogueUIManager.cs</code> script contained in the same
-								prefab
-							</p>
+							<p>Handles the management of the UI displayed during dialogue</p>-->
+
+
+							<h3>Dialogue Manager</h3>
+							<p>Dialogue Manager is responsible for processing the Dialogue File <br>Referring to this script, you can change the dialog, the current UI, and also initiate the dialog</p>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Version</th>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Localization Manager</td>
+										  <td class="align-middle">Scriptable Object containing language settings<br><code>Assets/Meet and Talk/Resources/Languages.asset</code></td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Audio Source</td>
+										  <td class="align-middle">Audio Source from which sound will be played</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Main UI</td>
+										  <td class="align-middle">Default UI that displays when the dialogue is started</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Start Dialogue Event()</td>
+										  <td class="align-middle">Unity Event executed when starting the Dialogue</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">End Dialogue Event()</td>
+										  <td class="align-middle">Unity Event executed when ending the Dialogue</td>
+										</tr>
+									</tbody>
+								  </table>
+								  </div>
+
+								  <h3>Dialogue UI Manager</h3>
+								  <p>It is Assigned to each UI individually, it is where you need to assign UI Elements to a Script and you can change several UI behaviors when playing Dialogues</p>
+<!-- TABLE -->
+<div class="table-responsive">
+	<table class="table table-bordered text-center">
+		<thead>
+		  <tr>
+			<th scope="col">Version</th>
+			<th scope="col">Value</th>
+			<th scope="col">Description</th>
+		  </tr>
+		</thead>
+		<tbody>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Enable Type Writing</td>
+			  <td class="align-middle">Enables Type Writing Animation</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Typing Speed</td>
+			  <td class="align-middle">Typing Speed for Type Writing Animation (CPS - characters per second)</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Show Separate Name</td>
+			  <td class="align-middle">Allows the Character Name to be displayed separately from the dialogue text</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Clear Name Color</td>
+			  <td class="align-middle">Clears the Character Name from formatting</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Name Text Box</td>
+			  <td class="align-middle">Text Box Where character name is displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Text Box</td>
+			  <td class="align-middle">Text box where dialogue text is displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Dialogue Canvas</td>
+			  <td class="align-middle">Main UI Object</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Timer Slider</td>
+			  <td class="align-middle">Slider indicating the choice time</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Skip Button</td>
+			  <td class="align-middle">Button object skipping Dialog</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Sprite Left</td>
+			  <td class="align-middle">The object containing the Component Image displaying the Sprite on the left Side</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Sprite Right</td>
+			  <td class="align-middle">The object containing the Component Image displaying the Sprite on the right Side</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Button Prefab</td>
+			  <td class="align-middle">Button Prefab used for choices</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Button Container</td>
+			  <td class="align-middle">Object where buttons appear</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Left Avatar Empty</td>
+			  <td class="align-middle">Lets you hide items when the Left Avatar is not displayed</td>.
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Right Avatar Empty</td>
+			  <td class="align-middle">Lets you hide items when the Right Avatar is not displayed</td>.
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Choice Empty</td>
+			  <td class="align-middle">Lets you hide items when Selection Options are not displayed</td>
+			</tr>
+		</tbody>
+	  </table>
+	  </div>
+
 						</section>
 						<hr class="divider" />
+
+
 						<section id="howtouse_GetDialog">
 							<h2>Using Dialogue in the Game</h2>
 							<p>To set up Dialogue for a scene, you need to go through a few steps:</p>

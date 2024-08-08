@@ -3551,6 +3551,7 @@ input:-internal-autofill-selected {
 .table-bordered td,
 .table-bordered th {
   border: 1px solid #444;
+  color: #666
 }
 
 .table thead th {
@@ -3683,4 +3684,21 @@ blue-txt {
 .print .idocs-content {
   margin-left: 0;
 
+}
+
+
+
+/* Node Title Rensponsible */
+@media (max-width: 500px) {
+  .media {
+    flex-direction: column;
+  }
+}
+.media-right{
+  flex-direction: row-reverse;
+}
+
+.list-group-horizontal li{
+  background: transparent;
+  border-color: #6a6a6a;
 }
