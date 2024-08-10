@@ -57,7 +57,8 @@
 							<img src="assets/images/icon.png" height="36" width="36">
 						</a>
 
-						<span class="text-6 ml-2">MEET AND TALK- DIALOGUE SYSTEM</span>
+						<span class="text-6 ml-2" style="font-weight: 800; ">Meet And Talk</span>
+						<span class="text-4 ml-2" style="font-weight: 600; ">Documentation</span>
 						<!-- Logo End -->
 						<!-- Navbar Toggler -->
 						<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
@@ -163,6 +164,12 @@
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howtouse_import_export"><span class="badge badge-purple">PRO</span> Import / Export</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_AutoTranslate"><span class="badge badge-purple">PRO</span> Auto Translate</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_SaveOption"><span class="badge badge-purple">PRO</span> Save Dialogue Progress</a>
 								</li>
 							</ul>
 						</li>
@@ -547,12 +554,12 @@
 									<td class="align-middle">Repeats the last displayed Node</td>
 								  </tr>
 								  <tr>
-									<th scope="row" class="align-middle"><span class="badge badge-blue">Pro</span></th>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
 									<td class="align-middle">Go Back</td>
 									<td class="align-middle">Repeats the second-to-last displayed Node</td>
 								  </tr>
 								  <tr>
-									<th scope="row" class="align-middle"><span class="badge badge-blue">Pro</span></th>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
 									<td class="align-middle">Return To Start</td>
 									<td class="align-middle">Returns to a random Start Node</td>
 								  </tr>
@@ -765,17 +772,6 @@
 							<p>To set up the Dialogue UI, you need to drag the <code>Meet and Talk</code> Prefab from the <code>Assets -> Meet and Talk -> Example</code> folder into the scene where you want to use the Dialogue System</p>
 							<p class="alert alert-info">The Prefab can also be dragged, for example, into a player prefab, allowing for faster usage across multiple scripts</p>
 
-							<!--<h3>Dialogue Manager</h3>
-							<p><b>Dialogue Manager</b> contains all the scripts responsible for executing dialogues</p>
-							
-							<h5>Dialogue Event Manager.cs</h5>
-							<p>Handles the execution of Event Nodes</p>
-							<p>Znajduje się w nim lista Scene Events która umożliwia utworzenie Eventów które wpływają na Scenę ale inne Systemy i Skrypty</p>
-							
-							<h5>Dialogue UI Manager.cs</h5>
-							<p>Handles the management of the UI displayed during dialogue</p>-->
-
-
 							<h3>Dialogue Manager</h3>
 							<p>Dialogue Manager is responsible for processing the Dialogue File <br>Referring to this script, you can change the dialog, the current UI, and also initiate the dialog</p>
 							
@@ -900,12 +896,12 @@
 			<tr>
 			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
 			  <td class="align-middle">Hide If Left Avatar Empty</td>
-			  <td class="align-middle">Lets you hide items when the Left Avatar is not displayed</td>.
+			  <td class="align-middle">Lets you hide items when the Left Avatar is not displayed</td>
 			</tr>
 			<tr>
 			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
 			  <td class="align-middle">Hide If Right Avatar Empty</td>
-			  <td class="align-middle">Lets you hide items when the Right Avatar is not displayed</td>.
+			  <td class="align-middle">Lets you hide items when the Right Avatar is not displayed</td>
 			</tr>
 			<tr>
 			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
@@ -923,32 +919,59 @@
 						<section id="howtouse_GetDialog">
 							<h2>Using Dialogue in the Game</h2>
 							<p>To set up Dialogue for a scene, you need to go through a few steps:</p>
-							<h5>1. Setup UI</h5>
+							<h5 style="margin: 0;">1. Setup UI</h5>
 							<p>
 								You need to prepare the Dialogue UI as described in this part of the documentation
 								<a href="#howtouse_SetupUI">[Setup Dialogue UI]</a>
 							</p>
-							<h5>2. Interaction Object</h5>
+
+							<h5 style="margin: 0;">2. Interaction Object</h5>
 							<p>
 								To use the dialogue, you must have a prepared object in the scene that can trigger the dialogue. For the purposes of the demo and documentation, I will describe an example using TriggerArea.cs, but it could be a different
-								script allowing the use of Unity Events, for example, <code>InteractionScript.cs in <b>Hellish Battle - 2.5D Retro FPS</b></code>
+								script allowing the use of Unity Events, for example: <br><code>InteractionScript.cs in <b>Hellish Battle - 2.5D Retro FPS</b></code><br><code>DemoInteraction.cs or TriggerArea.cs in <b>Meet and Talk</b></code>
 							</p>
-							<h5>3. Setting Up Unity Events</h5>
-							<p>Now we move on to the actual usage of the dialogue. You can trigger the dialogue in two different ways</p>
-							<h5>Dialogue First, Execution Next</h5>
-							<p>In this approach, we need to add 2 new elements to the UnityEvents</p>
-							<p><b>1. DialogueManager.SetupDialogue(DialogueContainerSO)</b> to which we assign the dialogue we want to execute</p>
-							<p>
-								<b>2. DialogueManager.StartDialogue</b><br />Here, we have two options: either we choose <code>StartDialogue()</code>, which will begin the dialogue from a random Start Node, or <code>StartDialogue(string)</code>, which will
-								try to find a Start Node with the ID assigned during the script execution. If it doesn't find one, it starts the dialogue from a random Start Node
-							</p>
-							<p class="alert alert-info"><b>StartDialogue(string)</b> is only available in the <span class="badge badge-purple">Pro</span> Version</p>
-							<h5>Direct Execution of Dialogue</h5>
-							<p>In this approach, we need to add a new element to the UnityEvents: <b>DialogueManager.StartDialogue(DialogueContainerSO)</b>, which assigns and immediately executes the dialogue from a random Start Node</p>
-							<p class="alert alert-info"><b>Direct Execution of Dialogue</b> does not support starting the dialogue from a Start Node with a specific ID</p>
+
+							<h5 style="margin: 0;">3. Start Dialogue</h5>
+							<p>To call a dialog you must first set the appropriate dialog as default and start it, to do this you can use several methods:</p>
+							
+							<div class="list-group">
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Quick Start Dialogue</h4>
+							<p>With one function you can call the Selected Dialogue</p>
+							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);</span></pre>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Setup first then Start</h4>
+							<p>Assign Selected Dialog first then Call <b>Random</b> Dialog Start</p>
+							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);
+<green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>();</span></pre>
+<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
+							
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;"><span class="badge badge-purple">Pro</span>Setup first then Start (from Start ID)</h4>
+							<p>Assign Selected Dialogue first and then Call <b>Specific</b> Dialogue Start</p>
+							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);
+<green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>(<blue-txt>string</blue-txt>);</span></pre>
+<br><p style="margin: 0;">In Start Dialogue you need to enter the Start ID located in the Dialogue, if such ID does not exist then a random start will be called</p>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Calling this function in the Free version will cause a random start to be started</p>
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Calling in the Script</h4>
+							<p>If we want to create our own Script that deals with starting the Dialogue, we can use the following function:</p>
+							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt> DialogueSO, <red-txt>string</red-txt> StartID);</span></pre> </li> </div>
+							
+							<br><h4>Change Dialogue UI In-Game</h4>
+							<p>With a simple function you can change the UI used for dialogues, it can be called in UnityEvent or in Script</p>
+							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupUI</yellow-txt>(<blue-txt>DialogueUIManager</blue-txt>);</yellow-txt></span></pre>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>UI cannot be changed during Dialogue</p>
+
 						</section>
 
 						<hr class="divider" />
+
+
 						<section id="howtouse_GlobalValue">
 							<h2>Global Value</h2>
 							<p>
@@ -956,21 +979,35 @@
 								<code>Meet and Talk -> Global Value Manager</code>
 							</p>
 							<p>There will be 4 tabs <code>Int</code>, <code>Float</code>, <code>Bool</code> and <code>String</code> in these tabs you can add and edit variables</p>
-							<ul class="changelog long-badge">
-								<li>
-									<span class="badge">Name</span>
-									We refer to a specific variable
-								</li>
-								<li>
-									<span class="badge">Value</span>
-									The current value of the variable saved with PlayerPrefs
-								</li>
-								<li>
-									<span class="badge">Default Value</span>
-									Value set during Reset/Create Variable
-								</li>
-							</ul>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row"  class="align-middle">Name</th>
+										  <td class="align-middle">We refer to a specific variable</code></td>
+										</tr>
+										<tr>
+										  <th scope="row"  class="align-middle">Value</th>
+										  <td class="align-middle">The current value of the variable saved with PlayerPrefs</code></td>
+										</tr>
+										<tr>
+										  <th scope="row"  class="align-middle">Default Value</th>
+										  <td class="align-middle">Value set during Reset/Create Variable</code></td>
+										</tr>
+									</tbody>
+								  </table>
+								  </div>
 						</section>
+
+
 
 						<hr class="divider" />
 						<section id="howtouse_NewEvent">
@@ -1014,7 +1051,6 @@
 						</section>
 						<hr class="divider" />
 
-						<hr class="divider" />
 						<section id="howtouse_ValueInDialog">
 							<h2><span class="badge badge-purple">Pro</span> Use Global Value in Dialogue</h2>
 							<p>To use Global Value in Dialog, you need to write <code>{VARIABLE}</code> in Dialogue, Choice or Timer Choice Node, so that when you fire up Dialog, the desired variable is displayed</p>
@@ -1030,6 +1066,40 @@
 							</p>
 							<p class="alert alert-info">The data is saved to a .tsv file that can be easily opened in, for example, Excel, Word, etc.</p>
 							<p>From update 1.5.0a there is an option to export and import localization of dialogues. the option is available in <code>Dialogue Editor</code> and in <code>Inspector</code></p>
+						</section>
+						<hr class="divider" />
+
+						<section id="howtouse_AutoTranslate">
+							<h2><span class="badge badge-purple">Pro</span> Auto Translate</h2>
+							<p>To start using Auto Translate You need to enter one of the two available API Keys (DeepL or Google Translate), to get them you need to create an account on the chosen platform and go through the account creation process</p>
+							<p class="alert alert-info">Both accounts in the free version have the same number of available characters to use in a given month [500K/Month]</p>
+							<a class="popup-img" href="assets/images/AutoTranslate_ApiKey.png"><img class="img-fluid border" src="assets/images/AutoTranslate_ApiKey.png" alt=""></a>
+							<p>If we already have one of the API Keys set, we can go to DialogueContainerSO, after clicking on it in the inspector the editor will open with the <b>Translate Dialog</b></p>
+							
+							<a class="popup-img" href="assets/images/AutoTranslate_Editor.png"><img class="img-fluid border" src="assets/images/AutoTranslate_Editor.png" alt=""></a>
+							<br><br><p class="alert alert-info"><span class="badge badge-red">Note</span>Remember to close the Dialogue Editor [This requirement will disappear in the next update]</p>
+							<p class="alert alert-info"><span class="badge badge-red">Note</span>Auto Translate only translates from English to other languages ​​and when the field in the other language is empty (This allows you to save a large part of the character limit for the API Key)</p>
+							<p>After clicking Translate Dialog the entire dialogue will be translated</p>
+							
+							</section>
+
+						<hr class="divider" />
+
+						<section id="howtouse_SaveOption"> <h2><span class="badge badge-purple">Pro</span> Save Dialogue Progress</h2> <p>To set Dialogue Progress Saving, you must open the selected DialogueContainerSO in the inspector dialogue</p> <a class="popup-img" href="assets/images/AutoTranslate_Editor.png"><img class="img-fluid border" src="assets/images/AutoTranslate_Editor.png" alt=" "></a> <p>Two options will appear in the Dialogue Settings tab</p> <!-- TABLE --> <div class="table-responsive"> <table class="table table-bordered text- center"> <thead> <tr> <th scope="col">Value</th> <th scope="col">Description</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<th scope="row" class="align-middle">Allow Dialogue Save</th>
+						<td class="align-middle">Allows saving Progress Dialogue</code></td>
+						</tr>
+						<tr>
+						<th scope="row" class="align-middle">Blocking Reopening Dialogue</th>
+						<td class="align-middle">Sets the behavior when trying to open a Dialog after it has been completed (Save at <b>Any</b> End Node)<br><code>IF True</code> prevents the selected dialog from being reopened<br><code>IF False</code> Starts Dialogue according to selected option [See <a href="#howtouse_GetDialog"><b>Use Dialogue In-Game</b></a>]</td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
 						</section>
 						<hr class="divider" />
 
@@ -1108,6 +1178,65 @@
 								Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
 								<a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
 							</p>
+<!-- Version 1.7.0a -->
+<h3 id="changelog_1_7_0a">
+	Version 1.7.0a
+	<small class="text-muted">08 August, 2024</small>
+</h3>
+<ul class="changelog">
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Dialogue Save Option
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		One-Click Dialogue Translation
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Hide UI Elements in Dialogue
+	</li>
+	<li>
+		<span class="badge badge-yellow">Update</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Improved DialogueContainer Editor
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Dynamic UI Change
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		New Script Icons
+	</li>
+	<li>
+		<span class="badge badge-yellow">Update</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Improved Demo Scene
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Skip Audio
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Build Settings
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Missing Script
+	</li>
+</ul>
+
+<!-- Version 1.6.0a -->
 							<h3 id="changelog_1_6_0a">
 								Version 1.6.0a
 								<small class="text-muted">29 May, 2024</small>

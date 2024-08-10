@@ -117,7 +117,7 @@ body {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #fa4753 animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  /*background: #fa4753 animation-timing-function: cubic-bezier(0, 1, 1, 0);*/
 }
 
 .preloader .lds-ellipsis div:nth-child(1) {
@@ -725,19 +725,20 @@ hr {
 }
 
 .box #main-wrapper {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.5);
 }
 
+
 .box .idocs-navigation {
   left: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .container {
-    max-width: 1170px !important;
+    max-width: 1570px !important;
   }
 }
 
@@ -748,7 +749,7 @@ hr {
   left: 0;
   overflow: hidden;
   overflow-y: auto;
-  width: 260px;
+  width: 290px;
   height: calc(100% - 70px);
   z-index: 1;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
@@ -854,7 +855,7 @@ hr {
 /*=== 3.2 Docs Content ===*/
 .idocs-content {
   position: relative;
-  margin-left: 260px;
+  margin-left: 290px;
   padding: 0px 50px 50px;
   min-height: 750px;
   transition: all 0.3s;
@@ -3701,4 +3702,33 @@ blue-txt {
 .list-group-horizontal li{
   background: transparent;
   border-color: #6a6a6a;
+}
+
+@media (max-width: 550px){
+  .social-icons{
+    display: none;
+  }
+}
+
+@media (max-width: 500px){
+  .primary-menu .text-6{
+    font-size: 1rem !important;
+  }
+  .primary-menu .text-4{
+    font-size: .75rem !important;
+  }
+}
+
+@media (max-width: 400px){
+  .primary-menu img{
+    display: none;
+  }
+}
+
+.list-group li{
+  background: transparent;
+  border-color: #444;
+}
+.list-group .hljs{
+  padding: 1rem;
 }
