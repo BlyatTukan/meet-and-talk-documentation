@@ -30,12 +30,12 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
 	</head>
 	<style>
-		/*.idocs-navigation {
+		.idocs-navigation {
 			display: none;
 		}
 		.idocs-content {
 			margin-left: 0 !important;
-		}*/
+		}
 	</style>
 	<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
 		<!-- Preloader -->
@@ -156,6 +156,9 @@
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howtouse_GetDialog">Use Dialogue in Game</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_Localization">Localization</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howtouse_GlobalValue">Global Value</a>
@@ -945,37 +948,59 @@
 							<li class="list-group-item">
 							<h4 style="margin: 0;">Quick Start Dialogue</h4>
 							<p>With one function you can call the Selected Dialogue</p>
-							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);</span></pre>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>StartDialogue</yellow>(<blue>DialogueContainer SO</blue>);</span></pre>
 							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
 							</li>
 							<li class="list-group-item">
 							<h4 style="margin: 0;">Setup first then Start</h4>
 							<p>Assign Selected Dialog first then Call <b>Random</b> Dialog Start</p>
-							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);
-<green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>();</span></pre>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue>);
+<green>DialogueManager</green>.<yellow>StartDialogue</yellow>();</span></pre>
 <br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
 							
 							</li>
 							<li class="list-group-item">
 							<h4 style="margin: 0;"><span class="badge badge-purple">Pro</span>Setup first then Start (from Start ID)</h4>
 							<p>Assign Selected Dialogue first and then Call <b>Specific</b> Dialogue Start</p>
-							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt>);
-<green-txt>DialogueManager</green-txt>.<yellow-txt>StartDialogue</yellow-txt>(<blue-txt>string</blue-txt>);</span></pre>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue>);
+<green>DialogueManager</green>.<yellow>StartDialogue</yellow>(<blue>string</blue>);</span></pre>
 <br><p style="margin: 0;">In Start Dialogue you need to enter the Start ID located in the Dialogue, if such ID does not exist then a random start will be called</p>
 							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Calling this function in the Free version will cause a random start to be started</p>
 							</li>
 							<li class="list-group-item">
 							<h4 style="margin: 0;">Calling in the Script</h4>
 							<p>If we want to create our own Script that deals with starting the Dialogue, we can use the following function:</p>
-							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupDialogue</yellow-txt>(<blue-txt>DialogueContainer SO</blue-txt> DialogueSO, <red-txt>string</red-txt> StartID);</span></pre> </li> </div>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue> DialogueSO, <red>string</red> StartID);</span></pre> </li> </div>
 							
 							<br><h4>Change Dialogue UI In-Game</h4>
 							<p>With a simple function you can change the UI used for dialogues, it can be called in UnityEvent or in Script</p>
-							<pre style="margin: 0"><span class="hljs"><green-txt>DialogueManager</green-txt>.<yellow-txt>SetupUI</yellow-txt>(<blue-txt>DialogueUIManager</blue-txt>);</yellow-txt></span></pre>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupUI</yellow>(<blue>DialogueUIManager</blue>);</yellow></span></pre>
 							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>UI cannot be changed during Dialogue</p>
 
 						</section>
 
+						<hr class="divider" />
+
+						<section id="howtouse_Localization">
+							<h2>Localization</h2>
+							<p>Localization settings can be found in <code>Project Settings -> Meet and Talk -> Localization</code></p>
+<p>
+<a class="popup-img" href="assets/images/Localization.png"><img class="img-fluid border" src="assets/images/Localization.png" alt="" /></a>
+</p>
+<h4 style="margin: 0;">Adding a New Language</h4>
+<p style="margin: 0;">To add a new language, in the <code><b>Available Language List</b></code> click the <b>+</b> Icon<br>This will add a new language to the list, then you need to select the language you want to add from the list<br>At the very end, you need to click <code><b>Generate C# Enum</b></code></p>
+<br><p class="alert alert-info"><span class="badge badge-red">Note</span> In future updates Generate C# Enum will happen automatically</p>
+<h4 style="margin: 0;">Managing Localization with Code</h4>
+							<pre style="margin: 0"><span class="hljs"><comment>// Get Localization Settings</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>;
+
+<comment>// Get Actual Language</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>.<orange>SelectedLang</orange>();
+
+<comment>// Change Actual Language</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>.<orange>selectedLang</orange> = <blue>SystemLanguage</blue>.Polish;
+</span></pre>
+						</section>
 						<hr class="divider" />
 
 
@@ -1020,15 +1045,15 @@
 						<section id="howtouse_NewEvent">
 							<h2><span class="badge badge-purple">Pro</span> New Event</h2>
 							<p>If you want to create a new event You need to create a new event script, where you write your event code</p>
-							<pre style="margin: 0">        <span class="hljs"><red-txt>using</red-txt> System.Collections;
-<red-txt>using</red-txt> System.Collections.Generic;
-<red-txt>using</red-txt> UnityEngine;
+							<pre style="margin: 0">        <span class="hljs"><red>using</red> System.Collections;
+<red>using</red> System.Collections.Generic;
+<red>using</red> UnityEngine;
 
-[<green-txt>CreateAssetMenu</green-txt>(menuName = <yellow-txt>"Dialogue/Event/YOUR_NAME"</yellow-txt>)]
-[<green-txt>System</green-txt>.<yellow-txt>Serializable</yellow-txt>]
-<red-txt>public</red-txt> <green-txt>class</green-txt> YOUR_NAME_Event : DialogueEventSO
+[<green>CreateAssetMenu</green>(menuName = <yellow>"Dialogue/Event/YOUR_NAME"</yellow>)]
+[<green>System</green>.<yellow>Serializable</yellow>]
+<red>public</red> <green>class</green> YOUR_NAME_Event : DialogueEventSO
 {
-	<red-txt>public override</red-txt> <green-txt>void</green-txt> RunEvent()
+	<red>public override</red> <green>void</green> RunEvent()
 	{
 		<comment>// Your Code Here</comment>
 	}
