@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en" class="no_print">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+		<link href="assets/images/favicon.png" rel="icon" />
+		<title>Meet and Talk | Online Documentation</title>
+		<meta name="description" content="Online Documentation to Meet and Talk" />
+		<meta name="keywords" content="Meet and Talk, Meet and Talk Free, Meet and Talk Pro, Dialogue, Dialogue Documentation" />
+		<meta name="author" content="Tiny Slime Studio" />
+
+    <meta property="og:title" content="Meet and Talk - Dialogue System | Documentation">
+    <meta property="og:description" content="Online Documentation to Meet and Talk & Meet and Talk - Free Version Dialogue System Asset Created by Tiny Slime Studio">
+    <meta property="og:image" content="https://blyattukan.github.io/meet-and-talk-documentation/assets/images/icon.png">
+    <meta property="og:url" content="https://blyattukan.github.io/meet-and-talk-documentation/">
+    <meta property="og:type" content="website">
+
+		<!-- Stylesheet
+         ============================== -->
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+		<!-- Highlight Syntax -->
+		<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+		<!-- Custom Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+	</head>
+	<style>
+		/*.idocs-navigation {
+			display: none;
+		}
+		.idocs-content {
+			margin-left: 0 !important;
+		}*/
+	</style>
+	<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- Preloader End -->
+		<!-- Document Wrapper   
+         =============================== -->
+		<div id="main-wrapper">
+			<!-- Header
+            ============================ -->
+			<header id="header" class="sticky-top">
+				<!-- Navbar -->
+				<nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+					<div class="container-fluid">
+						<!-- Sidebar Toggler -->
+						<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+						<!-- Logo -->
+						<a class="logo ml-md-3" href="index.html" title="Meet and Talk">
+							<img src="assets/images/icon.png" height="36" width="36">
+						</a>
+
+						<span class="text-6 ml-2" style="font-weight: 800; ">Meet And Talk</span>
+						<span class="text-4 ml-2" style="font-weight: 600; ">Documentation</span>
+						<!-- Logo End -->
+						<!-- Navbar Toggler -->
+						<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+						<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+							<ul class="navbar-nav">
+								<li>
+									<a target="_blank" href="https://assetstore.unity.com/publishers/63085">Assets Store</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio Website</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+							<li class="social-icons-github">
+								<a data-toggle="tooltip" href="https://github.com/BlyatTukan" target="_blank" title="" data-original-title="Github"><i class="fab fa-github"></i></a>
+							</li>
+							<li class="social-icons-discord">
+								<a data-toggle="tooltip" href="https://discord.gg/KtHKbYjBMS" target="_blank" title="" data-original-title="Discord"><i class="fab fa-discord"></i></a>
+							</li>
+							<li class="social-icons-youtube">
+								<a data-toggle="tooltip" href="https://www.youtube.com/channel/UCnhLf9kMlT55ftMMKSu5Qwg" target="_blank" title="" data-original-title="Youtube"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- Navbar End -->
+			</header>
+			<!-- Header End -->
+			<!-- Content
+            ============================ -->
+			<div id="content" role="main">
+				<!-- Sidebar Navigation
+               ============================ -->
+				<div class="idocs-navigation">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#tab_installation">Installation</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#installation_started">Getting Started</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_node">Node</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#node_start">Start Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_dialogue">Dialogue Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_choice">Choice Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_end">End Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_timer"><span class="badge badge-purple">PRO</span> Timer Choice Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_event"><span class="badge badge-purple">PRO</span> Event Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_random"><span class="badge badge-purple">PRO</span> Random Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_if"><span class="badge badge-purple">PRO</span> IF Node</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#node_command"><span class="badge badge-purple">PRO</span> Command Node</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_howtouse">How to Use</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_NewDialogue">New Dialogue</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_NewCharacter">New Character</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_SetupUI">Setup UI</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_GetDialog">Use Dialogue in Game</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_Localization">Localization</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_GlobalValue">Global Value</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_NewEvent"><span class="badge badge-purple">PRO</span> New Event</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_NewEmotion"><span class="badge badge-purple">PRO</span> New Character Emotion</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_ValueInDialog"><span class="badge badge-purple">PRO</span> Value in Dialogue</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_import_export"><span class="badge badge-purple">PRO</span> Import / Export</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_AutoTranslate"><span class="badge badge-purple">PRO</span> Auto Translate</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howtouse_SaveOption"><span class="badge badge-purple">PRO</span> Save Dialogue Progress</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_integration">Integration</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#integration_hellish_battle">Hellish Battle</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#integration_UHFPS">Ultimate Horror FPS</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_template">More Templates</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tab_changelog">Changelog</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_7_0a"> 1.7.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_6_0a"> 1.6.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_5_0a"> 1.5.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_4_0b"> 1.4.0b</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_4_0a"> 1.4.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_3_0a"> 1.3.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_2_0a"> 1.2.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_1_0a"> 1.1.0a</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_0_0b"> 1.0.0b</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#changelog_1_0_0a"> 1.0.0a</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- Docs Content
+               ============================ -->
+				<div class="idocs-content">
+					<div class="container">
+						<!-- installation
+                     ============================ -->
+						<section id="tab_installation">
+							<h1>Documentation</h1>
+							<h2>Meet and Talk - Dialogue System</h2>
+							<a class="popup-img" href="assets/images/Cover.png"><img class="img-fluid border" src="assets/images/Cover.png" alt="" /></a>
+							<!--<a class="btn btn-primary" href="https://blyattukan.github.io/hellish-battle-documentation/"><i class="fas fa-external-link-alt mr-1"></i> Online Documentation</a>-->
+							<hr />
+							<div class="row">
+								<div class="col-sm-6 col-lg-4">
+									<ul class="list-unstyled">
+										<li><strong>Version:</strong> 1.7.0a</li>
+										<li>
+											<strong>Author:</strong>
+											<a href="https://assetstore.unity.com/publishers/63085" target="_blank">Tiny Slime Studio</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<ul class="list-unstyled">
+										<li>
+											<strong class="font-weight-700">Created:</strong>
+											01 March, 2023
+										</li>
+										<li><strong>Update:</strong> 08 August, 2024</li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<ul class="list-unstyled">
+										<li><strong>File Size:</strong> ~25 MB</li>
+										<li>
+											<strong>Unity Versions:</strong>
+											2021.3.17+
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<hr class="divider" />
+						<!-- Getting Started
+                     ============================ -->
+						<section id="installation_started">
+							<h2>Getting Started</h2>
+							<p>Create a new 3D project.</p>
+							<p>
+								<a class="popup-img" href="assets/images/instalattion/getting_started_1.png"><img class="img-fluid border" src="assets/images/instalattion/getting_started_1.png" alt="" /></a>
+							</p>
+							<p>
+								From the toolbar, select
+								<code>Window -> Package Manager</code> to open the Package Manager
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/instalattion/getting_started_2.png"><img class="img-fluid border" src="assets/images/instalattion/getting_started_2.png" alt="" /></a>
+							</p>
+							<p>
+								From Droplist Packages: select
+								<code>My Assets</code> and search <code>Meet and Talk</code>, download and install
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/instalattion/getting_started_3.png"><img class="img-fluid border" src="assets/images/instalattion/getting_started_3.png" alt="" /></a>
+							</p>
+							<p>Once installed, the assets are ready to be installed</p>
+						</section>
+						<hr class="divider" />
+						<!-- Node
+                     ============================ -->
+						<section id="tab_node">
+							<h2>Node</h2>
+
+							<div class="row">
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Start.png" alt="" />
+										<h6 class="pt-2">Start Node</h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Dialogue.png" alt="" />
+										<h6 class="pt-2">Dialogue Node</h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/End.png" alt="" />
+										<h6 class="pt-2">End Node</h6>
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Choice.png" alt="" />
+										<h6 class="pt-2">Choice Node</h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Timer.png" alt="" />
+										<h6 class="pt-2">Timer Choice Node<br /><span class="badge badge-purple">Pro</span></h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Event.png" alt="" />
+										<h6 class="pt-2">Event Node<br /><span class="badge badge-purple">Pro</span></h6>
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Random.png" alt="" />
+										<h6 class="pt-2">Random Node<br /><span class="badge badge-purple">Pro</span></h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/IF.png" alt="" />
+										<h6 class="pt-2">IF Node<br /><span class="badge badge-purple">Pro</span></h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a>
+										<img class="img-fluid border" src="assets/images/node/Command.png" alt="" />
+										<h6 class="pt-2">Command Node<br /><span class="badge badge-purple">Pro</span></h6>
+									</a>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider" />
+						<section id="node_start">
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media">
+								<img src="assets/images/node/Start.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Start Node</h2>
+								  The Start Node is used to initiate a dialogue. If you want the dialogue to begin from one of several predefined points, add multiple Start Nodes.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Start ID</td>
+									<td class="align-middle">OPIS</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
+						</section>
+						<hr class="divider" />
+						<section id="node_dialogue">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Dialogue.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Dialogue Node</h2>
+								  The Dialogue Node is a fundamental node for displaying text. It allows assigning the speaker for the current line, associating an audio clip, and setting display time.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Audio Clip</td>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Character SO</td>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Position</td>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Emotion</td>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Displayed Text</td>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Display Time</td>
+									<td class="align-middle">
+										Time after which it automatically transitions to the next node.
+										<br /><code class="new-line">[if 0, manual transition is required]</code></td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
+						</section>
+						<hr class="divider" />
+						<section id="node_choice">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Choice.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">Choice Node</h2>
+								  The Choice Node functions similarly to the Dialogue Node, but the player must select one of the available responses.
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Audio Clip</td>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Character SO</td>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Position</td>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Avatar Emotion</td>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Displayed Text</td>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Time to Display Option</td>
+									<td class="align-middle">
+										Time after which the options will be displayed.</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+							  
+							<p>To add options, click <b>+ Add Choice Option</b> in the top right corner of the Node.</p>
+						</section>
+
+						<hr class="divider" />
+						<section id="node_end">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/End.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0">End Node</h2>
+								  The End Node is used to conclude a dialogue, but it has several additional options
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Version</th>
+									<th scope="col">Options</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">End</td>
+									<td class="align-middle">Ends the Dialogue</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Repeat</td>
+									<td class="align-middle">Repeats the last displayed Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Go Back</td>
+									<td class="align-middle">Repeats the second-to-last displayed Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+									<td class="align-middle">Return To Start</td>
+									<td class="align-middle">Returns to a random Start Node</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+									<td class="align-middle">Start Dialogue</td>
+									<td class="align-middle">Start New Dialogue from DialogueContainerSO</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+						</section>
+						<hr class="divider" />
+						<section id="node_timer">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Timer.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Timer Choice Node</h2>
+								  The Timer Choice Node works similarly to the Choice Node, but if the player does not select a response within a specified time, the system will automatically proceed to the assigned node
+								</div>
+							</div>
+
+							<h2></h2>
+
+							<!-- TABLE -->
+							<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+								  <tr>
+									<th scope="col">Value</th>
+									<th scope="col">Description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<th scope="row" class="align-middle">Audio Clip</th>
+									<td class="align-middle">Audio played when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Character SO</th>
+									<td class="align-middle">Name of the character delivering the dialogue.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Avatar Position</th>
+									<td class="align-middle">Character Avatar Position, Left, Right, or No Avatar Display</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Avatar Emotion</th>
+									<td class="align-middle">One of the available Character Emotion options</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Displayed Text</th>
+									<td class="align-middle">Text displayed when the node begins.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Time to Display Option</th>
+									<td class="align-middle">Time after which the options will be displayed.</td>
+								  </tr>
+								  <tr>
+									<th scope="row" class="align-middle">Time to Make Decision</th>
+									<td class="align-middle">Time player has to make a decision</td>
+								  </tr>
+								</tbody>
+							  </table>
+							  </div>
+
+							  
+							<div class="alert alert-info mb-4" role="alert">
+								<span class="badge badge-orange text-uppercase">Remember</span>
+								The first added port corresponds to the transition if the player does not select any option
+							</div>
+							<p>To add choices, you need to click <b>+ Add Choice Option</b> in the top right corner of the Node</p>
+						</section>
+						<hr class="divider" />
+
+						<section id="node_event">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Event.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Event Node</h2>
+								  The Event Node does not display any information for the player but is used to execute assigned events.
+								</div>
+							</div>
+
+							<h2></h2>
+							
+							<p>To add a new Event, you need to click the <b>+ Add Event</b> option in the top corner of the Node and assign a previously created event to it or automatically create an event from the Node's position.</p>
+						</section>
+						<hr class="divider" />
+						<section id="node_random">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Random.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Random Node</h2>
+								  The Random Node has a simple task; when executed, it randomly selects a different Node.
+								</div>
+							</div>
+
+							<h2></h2>
+							
+							<p>To add a Random dialog, you need to click the <b>+ Add Option</b> option in the upper right corner of the node and assign the next Node to it.</p>
+						</section>
+						<hr class="divider" />
+						<section id="node_if">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/IF.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> IF Node</h2>
+								  If Node checks whether the selected value with the given requirements returns true or false.
+								</div>
+							</div>
+
+							<h2></h2>
+						</section>
+						<hr class="divider" />
+						<section id="node_command">
+
+							<!-- TITLE & DESCRIPTION -->
+							<div class="media" >
+								<img src="assets/images/node/Command.png" class="mr-3" alt="...">
+								<div class="media-body">
+								  <h2 class="mt-0"><span class="badge badge-purple">Pro</span> Comment Node</h2>
+								  The Commend Node is used for creating comments in the editor. It can help in organizing large dialogs and make it easier to identify which part of the dialog it is.
+								</div>
+							</div>
+
+							<h2></h2>
+							
+						</section>
+						<hr class="divider" />
+
+						<!-- Getting Started
+                     ============================ -->
+						<section id="tab_howtouse"></section>
+						<section id="node_command">
+							<h2>New Dialogue</h2>
+							<p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the <code>Dialog</code> option and click <code>New Dialogue</code></p>
+							<p>Double-click on the created dialogue to edit it</p>
+							<p>
+								You will open the dialog editing window, at the beginning you must add start Node, and at the end of the dialog you must give end node
+								<code>You can have more than one end of the dialog and at each end you must give end node</code>
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/CreateDialogue.png"><img class="img-fluid border" src="assets/images/CreateDialogue.png" alt="" /></a>
+							</p>
+							<p>At the End you have to write the changes in the Dialog in the upper left corner of the editor</p>
+						</section>
+						<hr class="divider" />
+
+
+						<section id="howtouse_NewCharacter">
+							<h2>Create New Character</h2>
+							<p>In the Hierarchy Tab, right-click, and in the pop-up window click <br /><code>Create -> Dialogue -> New Dialogue Character</code></p>
+							<p>In the Inspector tab, you will see all the options available for the character</p>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Version</th>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										<td class="align-middle">Character Name</td>
+										<td class="align-middle">Here you set the name in each available language</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+										<td class="align-middle">Use Global Value as Name</td>
+										<td class="align-middle">Toggle enabling the ability to assign a dynamic character name</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+										<td class="align-middle">Dynamic Character Name</td>
+										<td class="align-middle">List of Strings with Global Value that is to appear as character name</td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										<td class="align-middle">Text Color</td>
+										<td class="align-middle">Here you set the color that the character's name should have</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  </div>
+
+								  <div class="alert alert-info mb-4" role="alert">
+									<span class="badge badge-purple text-uppercase">Pro Only</span>
+									<a href="#howtouse_NewEmotion">Here</a> you can find part of the documentation dedicated to Character Avatars
+								</div>
+
+
+						</section>
+						<hr class="divider" />
+
+						<section id="howtouse_SetupUI">
+							<h2>Setup Dialogue UI</h2>
+							<p>To set up the Dialogue UI, you need to drag the <code>Meet and Talk</code> Prefab from the <code>Assets -> Meet and Talk -> Example</code> folder into the scene where you want to use the Dialogue System</p>
+							<p class="alert alert-info">The Prefab can also be dragged, for example, into a player prefab, allowing for faster usage across multiple scripts</p>
+
+							<h3>Dialogue Manager</h3>
+							<p>Dialogue Manager is responsible for processing the Dialogue File <br>Referring to this script, you can change the dialog, the current UI, and also initiate the dialog</p>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Version</th>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Localization Manager</td>
+										  <td class="align-middle">Scriptable Object containing language settings<br><code>Assets/Meet and Talk/Resources/Languages.asset</code></td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Audio Source</td>
+										  <td class="align-middle">Audio Source from which sound will be played</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Main UI</td>
+										  <td class="align-middle">Default UI that displays when the dialogue is started</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">Start Dialogue Event()</td>
+										  <td class="align-middle">Unity Event executed when starting the Dialogue</td>
+										</tr>
+										<tr>
+										  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+										  <td class="align-middle">End Dialogue Event()</td>
+										  <td class="align-middle">Unity Event executed when ending the Dialogue</td>
+										</tr>
+									</tbody>
+								  </table>
+								  </div>
+
+								  <h3>Dialogue UI Manager</h3>
+								  <p>It is Assigned to each UI individually, it is where you need to assign UI Elements to a Script and you can change several UI behaviors when playing Dialogues</p>
+<!-- TABLE -->
+<div class="table-responsive">
+	<table class="table table-bordered text-center">
+		<thead>
+		  <tr>
+			<th scope="col">Version</th>
+			<th scope="col">Value</th>
+			<th scope="col">Description</th>
+		  </tr>
+		</thead>
+		<tbody>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Enable Type Writing</td>
+			  <td class="align-middle">Enables Type Writing Animation</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Typing Speed</td>
+			  <td class="align-middle">Typing Speed for Type Writing Animation (CPS - characters per second)</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Show Separate Name</td>
+			  <td class="align-middle">Allows the Character Name to be displayed separately from the dialogue text</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Clear Name Color</td>
+			  <td class="align-middle">Clears the Character Name from formatting</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Name Text Box</td>
+			  <td class="align-middle">Text Box Where character name is displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Text Box</td>
+			  <td class="align-middle">Text box where dialogue text is displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Dialogue Canvas</td>
+			  <td class="align-middle">Main UI Object</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Timer Slider</td>
+			  <td class="align-middle">Slider indicating the choice time</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Skip Button</td>
+			  <td class="align-middle">Button object skipping Dialog</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Sprite Left</td>
+			  <td class="align-middle">The object containing the Component Image displaying the Sprite on the left Side</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Sprite Right</td>
+			  <td class="align-middle">The object containing the Component Image displaying the Sprite on the right Side</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Button Prefab</td>
+			  <td class="align-middle">Button Prefab used for choices</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-blue">Free</span></th>
+			  <td class="align-middle">Button Container</td>
+			  <td class="align-middle">Object where buttons appear</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Left Avatar Empty</td>
+			  <td class="align-middle">Lets you hide items when the Left Avatar is not displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Right Avatar Empty</td>
+			  <td class="align-middle">Lets you hide items when the Right Avatar is not displayed</td>
+			</tr>
+			<tr>
+			  <th scope="row" class="align-middle"><span class="badge badge-purple">Pro</span></th>
+			  <td class="align-middle">Hide If Choice Empty</td>
+			  <td class="align-middle">Lets you hide items when Selection Options are not displayed</td>
+			</tr>
+		</tbody>
+	  </table>
+	  </div>
+
+						</section>
+						<hr class="divider" />
+
+
+						<section id="howtouse_GetDialog">
+							<h2>Using Dialogue in the Game</h2>
+							<p>To set up Dialogue for a scene, you need to go through a few steps:</p>
+							<h5 style="margin: 0;">1. Setup UI</h5>
+							<p>
+								You need to prepare the Dialogue UI as described in this part of the documentation
+								<a href="#howtouse_SetupUI">[Setup Dialogue UI]</a>
+							</p>
+
+							<h5 style="margin: 0;">2. Interaction Object</h5>
+							<p>
+								To use the dialogue, you must have a prepared object in the scene that can trigger the dialogue. For the purposes of the demo and documentation, I will describe an example using TriggerArea.cs, but it could be a different
+								script allowing the use of Unity Events, for example: <br><code>InteractionScript.cs in <b>Hellish Battle - 2.5D Retro FPS</b></code><br><code>DemoInteraction.cs or TriggerArea.cs in <b>Meet and Talk</b></code>
+							</p>
+
+							<h5 style="margin: 0;">3. Start Dialogue</h5>
+							<p>To call a dialog you must first set the appropriate dialog as default and start it, to do this you can use several methods:</p>
+							
+							<div class="list-group">
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Quick Start Dialogue</h4>
+							<p>With one function you can call the Selected Dialogue</p>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>StartDialogue</yellow>(<blue>DialogueContainer SO</blue>);</span></pre>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Setup first then Start</h4>
+							<p>Assign Selected Dialog first then Call <b>Random</b> Dialog Start</p>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue>);
+<green>DialogueManager</green>.<yellow>StartDialogue</yellow>();</span></pre>
+<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Selected option starts Dialogue from random Start Node</p>
+							
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;"><span class="badge badge-purple">Pro</span>Setup first then Start (from Start ID)</h4>
+							<p>Assign Selected Dialogue first and then Call <b>Specific</b> Dialogue Start</p>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue>);
+<green>DialogueManager</green>.<yellow>StartDialogue</yellow>(<blue>string</blue>);</span></pre>
+<br><p style="margin: 0;">In Start Dialogue you need to enter the Start ID located in the Dialogue, if such ID does not exist then a random start will be called</p>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>Calling this function in the Free version will cause a random start to be started</p>
+							</li>
+							<li class="list-group-item">
+							<h4 style="margin: 0;">Calling in the Script</h4>
+							<p>If we want to create our own Script that deals with starting the Dialogue, we can use the following function:</p>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupDialogue</yellow>(<blue>DialogueContainer SO</blue> DialogueSO, <red>string</red> StartID);</span></pre> </li> </div>
+							
+							<br><h4>Change Dialogue UI In-Game</h4>
+							<p>With a simple function you can change the UI used for dialogues, it can be called in UnityEvent or in Script</p>
+							<pre style="margin: 0"><span class="hljs"><green>DialogueManager</green>.<yellow>SetupUI</yellow>(<blue>DialogueUIManager</blue>);</yellow></span></pre>
+							<br><p class="alert alert-info"><span class="badge badge-red">Note</span>UI cannot be changed during Dialogue</p>
+
+						</section>
+
+						<hr class="divider" />
+
+						<section id="howtouse_Localization">
+							<h2>Localization</h2>
+							<p>Localization settings can be found in <code>Project Settings -> Meet and Talk -> Localization</code></p>
+<p>
+<a class="popup-img" href="assets/images/Localization.png"><img class="img-fluid border" src="assets/images/Localization.png" alt="" /></a>
+</p>
+<h4 style="margin: 0;">Adding a New Language</h4>
+<p style="margin: 0;">To add a new language, in the <code><b>Available Language List</b></code> click the <b>+</b> Icon<br>This will add a new language to the list, then you need to select the language you want to add from the list<br>At the very end, you need to click <code><b>Generate C# Enum</b></code></p>
+<br><p class="alert alert-info"><span class="badge badge-red">Note</span> In future updates Generate C# Enum will happen automatically</p>
+<h4 style="margin: 0;">Managing Localization with Code</h4>
+							<pre style="margin: 0"><span class="hljs"><comment>// Get Localization Settings</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>;
+
+<comment>// Get Actual Language</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>.<orange>SelectedLang</orange>();
+
+<comment>// Change Actual Language</comment>
+<green>LocalizationManager</green>.<yellow>Instance</yellow>.<orange>selectedLang</orange> = <blue>SystemLanguage</blue>.Polish;
+</span></pre>
+						</section>
+						<hr class="divider" />
+
+
+						<section id="howtouse_GlobalValue">
+							<h2>Global Value</h2>
+							<p>
+								To open Global Value, go to <code>Edit -> Project Settings</code> and then find the tab
+								<code>Meet and Talk -> Global Value Manager</code>
+							</p>
+							<p>There will be 4 tabs <code>Int</code>, <code>Float</code>, <code>Bool</code> and <code>String</code> in these tabs you can add and edit variables</p>
+							
+							<!-- TABLE -->
+							<div class="table-responsive">
+								<table class="table table-bordered text-center">
+									<thead>
+									  <tr>
+										<th scope="col">Value</th>
+										<th scope="col">Description</th>
+									  </tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row"  class="align-middle">Name</th>
+										  <td class="align-middle">We refer to a specific variable</code></td>
+										</tr>
+										<tr>
+										  <th scope="row"  class="align-middle">Value</th>
+										  <td class="align-middle">The current value of the variable saved with PlayerPrefs</code></td>
+										</tr>
+										<tr>
+										  <th scope="row"  class="align-middle">Default Value</th>
+										  <td class="align-middle">Value set during Reset/Create Variable</code></td>
+										</tr>
+									</tbody>
+								  </table>
+								  </div>
+						</section>
+
+
+
+						<hr class="divider" />
+						<section id="howtouse_NewEvent">
+							<h2><span class="badge badge-purple">Pro</span> New Event</h2>
+							<p>If you want to create a new event You need to create a new event script, where you write your event code</p>
+							<pre style="margin: 0">        <span class="hljs"><red>using</red> System.Collections;
+<red>using</red> System.Collections.Generic;
+<red>using</red> UnityEngine;
+
+[<green>CreateAssetMenu</green>(menuName = <yellow>"Dialogue/Event/YOUR_NAME"</yellow>)]
+[<green>System</green>.<yellow>Serializable</yellow>]
+<red>public</red> <green>class</green> YOUR_NAME_Event : DialogueEventSO
+{
+	<red>public override</red> <green>void</green> RunEvent()
+	{
+		<comment>// Your Code Here</comment>
+	}
+}
+</span>
+      </pre>
+							<p>In the Hierarchy tab, right-click, in the pop-up window hover over the <code>Create</code> option, hover over the <code>Dialog</code> option, hover over the <code>Event</code> option and click <code>YOUR_NAME</code></p>
+							<p>Now you can edit Event values directly in the Editor, after assigning an <code>EventSO</code> below you will see a list of all the supported values you can edit</p>
+							<h5>Supported Values Type:</h5>
+							<p class="long-badge">
+								<span class="badge badge-purple">Int</span> <span class="badge badge-purple">Float</span> <span class="badge badge-purple">String</span> <span class="badge badge-purple">Bool</span>
+								<span class="badge badge-purple">Enum</span> <span class="badge badge-purple">Color</span> <span class="badge badge-purple">Gradient</span> <span class="badge badge-purple">Object</span>
+								<span class="badge badge-purple">Animation Curve</span> <span class="badge badge-purple">Vector 2</span> <span class="badge badge-purple">Vector 2 Int</span> <span class="badge badge-purple">Vector 3</span>
+								<span class="badge badge-purple">Vector 3 Int</span> <span class="badge badge-purple">Vector 4</span>
+							</p>
+						</section>
+						<hr class="divider" />
+						<section id="howtouse_NewEmotion">
+							<h2><span class="badge badge-purple">Pro</span> New Character Emotion</h2>
+							<p>
+								In Character SO, you can assign avatars that you can display during dialogue. To add new emotions, you need to open
+								<code>DialogueCharacterSO.cs</code>. At the very bottom of the script, there's an enum named <b>AvatarType</b>. Here, you can add new emotions.
+								<code>Remember to assign them an ID, which must be the next number after the last variable.</code>
+							</p>
+							<p>After saving, new fields with the added emotions will be automatically added to the created CharacterSO.</p>
+							<p>Remember to add left and right sprites for each of the available emotions.</p>
+						</section>
+						<hr class="divider" />
+
+						<section id="howtouse_ValueInDialog">
+							<h2><span class="badge badge-purple">Pro</span> Use Global Value in Dialogue</h2>
+							<p>To use Global Value in Dialog, you need to write <code>{VARIABLE}</code> in Dialogue, Choice or Timer Choice Node, so that when you fire up Dialog, the desired variable is displayed</p>
+							<p>For the moment, Dialogue can display <code>Int</code>, <code>Float</code>, <code>Bool</code> and <code>String</code>.</p>
+							<p>For Int and Float variables, we can write <code>{VARIABLE, Value}</code>, which will display the number that remains after changing the Variable by a given value, or how much the Variable is missing to reach the Value</p>
+						</section>
+						<hr class="divider" />
+
+						<section id="howtouse_import_export">
+							<h2><span class="badge badge-purple">Pro</span> Import / Export Text</h2>
+							<p>
+								<a class="popup-img" href="assets/images/Import_Export_Text.png"><img class="img-fluid border" src="assets/images/Import_Export_Text.png" alt="" /></a>
+							</p>
+							<p class="alert alert-info">The data is saved to a .tsv file that can be easily opened in, for example, Excel, Word, etc.</p>
+							<p>From update 1.5.0a there is an option to export and import localization of dialogues. the option is available in <code>Dialogue Editor</code> and in <code>Inspector</code></p>
+						</section>
+						<hr class="divider" />
+
+						<section id="howtouse_AutoTranslate">
+							<h2><span class="badge badge-purple">Pro</span> Auto Translate</h2>
+							<p>To start using Auto Translate You need to enter one of the two available API Keys (DeepL or Google Translate), to get them you need to create an account on the chosen platform and go through the account creation process</p>
+							<p class="alert alert-info">Both accounts in the free version have the same number of available characters to use in a given month [500K/Month]</p>
+							<a class="popup-img" href="assets/images/AutoTranslate_ApiKey.png"><img class="img-fluid border" src="assets/images/AutoTranslate_ApiKey.png" alt=""></a>
+							<p>If we already have one of the API Keys set, we can go to DialogueContainerSO, after clicking on it in the inspector the editor will open with the <b>Translate Dialog</b></p>
+							
+							<a class="popup-img" href="assets/images/AutoTranslate_Editor.png"><img class="img-fluid border" src="assets/images/AutoTranslate_Editor.png" alt=""></a>
+							<br><br><p class="alert alert-info"><span class="badge badge-red">Note</span>Remember to close the Dialogue Editor [This requirement will disappear in the next update]</p>
+							<p class="alert alert-info"><span class="badge badge-red">Note</span>Auto Translate only translates from English to other languages ​​and when the field in the other language is empty (This allows you to save a large part of the character limit for the API Key)</p>
+							<p>After clicking Translate Dialog the entire dialogue will be translated</p>
+							
+							</section>
+
+						<hr class="divider" />
+
+						<section id="howtouse_SaveOption"> <h2><span class="badge badge-purple">Pro</span> Save Dialogue Progress</h2> <p>To set Dialogue Progress Saving, you must open the selected DialogueContainerSO in the inspector dialogue</p> <a class="popup-img" href="assets/images/AutoTranslate_Editor.png"><img class="img-fluid border" src="assets/images/AutoTranslate_Editor.png" alt=" "></a> <p>Two options will appear in the Dialogue Settings tab</p> <!-- TABLE --> <div class="table-responsive"> <table class="table table-bordered text- center"> <thead> <tr> <th scope="col">Value</th> <th scope="col">Description</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<th scope="row" class="align-middle">Allow Dialogue Save</th>
+						<td class="align-middle">Allows saving Progress Dialogue</code></td>
+						</tr>
+						<tr>
+						<th scope="row" class="align-middle">Blocking Reopening Dialogue</th>
+						<td class="align-middle">Sets the behavior when trying to open a Dialog after it has been completed (Save at <b>Any</b> End Node)<br><code>IF True</code> prevents the selected dialog from being reopened<br><code>IF False</code> Starts Dialogue according to selected option [See <a href="#howtouse_GetDialog"><b>Use Dialogue In-Game</b></a>]</td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
+						</section>
+						<hr class="divider" />
+
+						<!-- Getting Started
+                     ============================ -->
+						<section id="tab_integration"></section>
+						<section id="integration_hellish_battle">
+							<h2>Hellish Battle Integration</h2>
+							<a class="popup-img" href="https://blyattukan.github.io/hellish-battle-documentation/assets/images/Cover.png"
+								><img class="img-fluid border" src="https://blyattukan.github.io/hellish-battle-documentation/assets/images/Cover.png" alt=""
+							/></a>
+							<p class="alert alert-info mb-5"><b>Hellish Battle - 2.5D Retro FPS</b> supports <span class="badge badge-blue">Free</span>and <span class="badge badge-purple">Pro</span> Version</p>
+							<p>The only thing you need to do to integrate Meet and Talk and Hellish Battle, you need to install Meet and Talk in the Project where Hellish Battle is located</p>
+							<p>
+								<a class="popup-img" href="assets/images/localization/base.png"><img class="img-fluid border" src="assets/images/integration/mat_1.png" alt="" /></a>
+							</p>
+							<h4>Setup Dialog</h4>
+							<p>
+								To Add Dialogue to your scene, you must, in the <code>InteractionScript.cs</code> in the WhenInteraction() field, add the appropriate script call which is described here
+								<a href="#howtouse_GetDialogue">[Use Dialogue in Game]</a>
+							</p>
+							<p>
+								<a class="popup-img" href="assets/images/localization/base.png"><img class="img-fluid border" src="assets/images/integration/mat_2.png" alt="" /></a>
+							</p>
+						</section>
+						<hr class="divider" />
+						<section id="integration_UHFPS">
+							<h2>Ultimate Horror FPS Kit</h2>
+							<a class="popup-img" href="https://assetstorev1-prd-cdn.unity3d.com/key-image/e1864b72-8dec-422c-a04b-d3bcb5dda09c.webp"
+								><img class="img-fluid border" src="https://assetstorev1-prd-cdn.unity3d.com/key-image/e1864b72-8dec-422c-a04b-d3bcb5dda09c.webp" alt=""
+							/></a>
+							<p class="alert alert-info"><b>Ultimate Horror FPS Kit</b> supports <span class="badge badge-blue">Free</span>and <span class="badge badge-purple">Pro</span> Version</p>
+							<p class="alert alert-info mb-5">The integration with <b>Ultimate Horror FPS Kit</b> has been made possible thanks to the generosity of <b>ThunderWire</b>, who provided instructions for integrating their asset with mine.</p>
+							<p>
+								To access the integration instructions for UHFPS with Meet and Talk, please refer to the UHFPS documentation (link below) to go through all the steps:
+								<br /><br /><a href="https://docs.twgamesdev.com/uhfps/integrations/meet-and-talk" target="_blank">[Ultimate Horror FPS Documentation]</a> <br /><a
+									href="https://assetstore.unity.com/packages/templates/systems/uhfps-ultimate-horror-fps-kit-254506"
+									target="_blank"
+									>[Ultimate Horror FPS Asset Store]</a
+								>
+							</p>
+						</section>
+						<hr class="divider" />
+						<!-- More Templates
+                     ============================ -->
+						<section id="tab_template">
+							<h2>More Templates</h2>
+							<div class="row">
+								<div class="col-4 my-3 text-center">
+									<a target="_blank" href="https://github.com/BlyatTukan/Tiny-Slime-Asset-Server/blob/main/DrawTheLine_Banner.png?raw=true">
+										<img class="img-fluid border" src="assets/images/draw-the-line.png" alt="" />
+										<h6 class="pt-2">Draw The Line - Game Template<br /><span class="badge badge-green">4,99$</span></h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a target="_blank" href="https://u3d.as/2VXG">
+										<img class="img-fluid border" src="https://github.com/BlyatTukan/Tiny-Slime-Asset-Server/blob/main/LootTable_Banner.png?raw=true" alt="" />
+										<h6 class="pt-2">Loot Table - Universal Loot System<br /><span class="badge badge-green">Free</span></h6>
+									</a>
+								</div>
+								<div class="col-4 my-3 text-center">
+									<a target="_blank" href="https://u3d.as/2Nyc">
+										<img class="img-fluid border" src="https://github.com/BlyatTukan/Tiny-Slime-Asset-Server/blob/main/HellishBattle_Banner.png?raw=true" alt="" />
+										<h6 class="pt-2">Hellish Battle - 2.5D Retro FPS<br /><span class="badge badge-green">9.99$</span></h6>
+									</a>
+								</div>
+							</div>
+						</section>
+						<hr class="divider" />
+						<!-- Changelog
+                     ============================ -->
+						<section id="tab_changelog">
+							<h2>Changelog</h2>
+							<p class="text-4">See what has been added, changed in updates.</p>
+							<p class="alert alert-info mb-5">
+								Do you want to check what will be in the next update? check it out for the always up-to-date roadmap:
+								<a target="_blank" href="https://trello.com/b/PesaRufS/meet-and-talk-dialogue-system">Trello</a>
+							</p>
+<!-- Version 1.7.0a -->
+<h3 id="changelog_1_7_0a">
+	Version 1.7.0a
+	<small class="text-muted">08 August, 2024</small>
+</h3>
+<ul class="changelog">
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Dialogue Save Option
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		One-Click Dialogue Translation
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Hide UI Elements in Dialogue
+	</li>
+	<li>
+		<span class="badge badge-yellow">Update</span>
+		<span class="badge badge-purple short-badge">Pro</span>
+		Improved DialogueContainer Editor
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Dynamic UI Change
+	</li>
+	<li>
+		<span class="badge badge-green">Added</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		New Script Icons
+	</li>
+	<li>
+		<span class="badge badge-yellow">Update</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Improved Demo Scene
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Skip Audio
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Build Settings
+	</li>
+	<li>
+		<span class="badge badge-red">Fix</span>
+		<span class="badge badge-blue short-badge">Free</span>
+		Fix Missing Script
+	</li>
+</ul>
+
+<!-- Version 1.6.0a -->
+							<h3 id="changelog_1_6_0a">
+								Version 1.6.0a
+								<small class="text-muted">29 May, 2024</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									End Option: Start New Dialogue
+								</li>
+								<li>
+									<span class="badge badge-yellow">Update</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Improved Event SO
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Dialogue Editor Validation
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Migrate to MeetAndTalk namespace
+								</li>
+								<li>
+									<span class="badge badge-yellow">Update</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Improved Hellish Battle Integration
+								</li>
+							</ul>
+							<h3 id="changelog_1_5_0a">
+								Version 1.5.0a
+								<small class="text-muted">03 April, 2024</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Import / Export Text
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									3 New UI Demo
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Updated Dialogue Manager UI
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Locking Option to Open Editor in Play Mode
+								</li>
+							</ul>
+							<h3 id="changelog_1_4_0b">
+								Version 1.4.0b
+								<small class="text-muted">02 February, 2024</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-yellow">Updated</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Change Font to Cube Cavern
+								</li>
+							</ul>
+							<h3 id="changelog_1_4_0a">
+								Version 1.4.0a
+								<small class="text-muted">26 January, 2024</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									If Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Global Value Event
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Global Value in Dialogue
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Hide Private Value in Event Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Global Value (Int, Float, Bool, String)
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Global Value UI
+								</li>
+							</ul>
+							<h3 id="changelog_1_3_0a">
+								Version 1.3.0a
+								<small class="text-muted">02 September, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Character Avatar
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Avatar Emotions
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Type Writing Support Rich Text
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Auto Save Dialogue
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Hide Skip Button on Choice
+								</li>
+								<li>
+									<span class="badge badge-red">Fix</span>
+									Fix Link Break Error
+								</li>
+							</ul>
+							<h3 id="changelog_1_2_0a">
+								Version 1.2.0a
+								<small class="text-muted">25 August, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Command Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Random Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Start ID
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Typing Animation
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Click Button to next Dialog
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Better Naming
+								</li>
+							</ul>
+							<h3 id="changelog_1_1_0a">
+								Version 1.1.0a
+								<small class="text-muted">25 May, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span> Better Event Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Random Start Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Selectable Editor Theme
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Possibility of not using the character's name with dialogues
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Add New Font DigitalDisco.ttf
+								</li>
+								<li>
+									<span class="badge badge-red">Fix</span>
+									Fix Warning when dialog didn't have audio
+								</li>
+							</ul>
+							<h3 id="changelog_1_0_0b">
+								Version 1.0.0b
+								<small class="text-muted">07 April, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-orange">Integration</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Hellish Battle Integration
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Skil Button
+								</li>
+								<li>
+									<span class="badge badge-red">Fix</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Fix Few Bugs
+								</li>
+							</ul>
+							<h3 id="changelog_1_0_0a">
+								Version 1.0.0a
+								<small class="text-muted">01 March, 2023</small>
+							</h3>
+							<ul class="changelog">
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Dialogue Window
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Start Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									End Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Dialogue Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Choice Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Character SO
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Localization
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-blue short-badge">Free</span>
+									Audio
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Timer Choice Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Event Node
+								</li>
+								<li>
+									<span class="badge badge-green">Added</span>
+									<span class="badge badge-purple short-badge">Pro</span>
+									Dialogue SO Custom Editor
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- Content end -->
+			<!-- Footer
+            ============================ -->
+			<footer id="footer" class="section bg-dark footer-text-light">
+				<div class="container">
+					<p class="text-center">
+						Copyright &copy; 2022 - 2024
+						<a href="https://blyattukan.github.io/TinySlimeStudio/">Tiny Slime Studio</a>. All Rights Reserved.
+					</p>
+				</div>
+			</footer>
+			<!-- Footer end -->
+		</div>
+		<!-- Document Wrapper end -->
+		<!-- Back To Top -->
+		<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+		<!-- JavaScript
+         ============================ -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Highlight JS -->
+		<script src="assets/vendor/highlight.js/highlight.min.js"></script>
+		<!-- Easing -->
+		<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<!-- Custom Script -->
+		<script src="assets/js/theme.js"></script>
+	</body>
+</html>
